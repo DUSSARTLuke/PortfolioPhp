@@ -44,7 +44,7 @@
         <?php
         foreach($lesPages as $laPage){
           echo '<li><a href="'.$laPage['lien'].'">
-            <i class="fa fa-file-alt" aria-hidden="true"></i>'.$laPage['libelle'].'
+            <i class="'.$laPage['class'].'" aria-hidden="true"></i> '.$laPage['libelle'].'
           </a>
           </li>';
         }
@@ -64,7 +64,7 @@
             <i class="fa fa-list" aria-hidden="true"></i> Projets
           </a>
         </li>-->
-        <li class="header">Résaux Sociaux</li>
+        <li class="header">Réseaux Sociaux</li>
         <li>
           <a href="https://github.com/Neguro">
             <i class="fa fa-github" aria-hidden="true"></i> Github
