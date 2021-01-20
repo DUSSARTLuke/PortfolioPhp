@@ -1,70 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+require_once '../includes/PdoPortfolio.php';
+try {
+  $pdo = PdoPortfolio::getPdoPortfolio();
+  $pageActuelle = 'accueil';
+  $presentation = $pdo->getLaPresentation($pageActuelle);
+} catch (Exception $e) {
+  echo 'Erreur : ' . $e->getMessage();
+}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Luke DUSSART">
-    <title>Portfolio | DUSSART Luke</title>
-    <link rel="icon" href="images/favicon.png" src="https://icones8.fr/icons/set/libre-de-droits">
-    <!-- Theme Bootstrap -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css" src="https://bootswatch.com">
-    <!-- Integration Fontawesome -->
-    <script src="https://kit.fontawesome.com/a19b0d8700.js" crossorigin="anonymous"></script>
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all"
-          rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"
-          rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css" author="Daan Vankerkom">
-
-
-  </head>
-
-  <body> 
-    <!-- Barre de navigation -->
-    <div class="sidebar-container">
-      <div class="sidebar-logo">
-        Mon Portfolio
-      </div>
-      <ul class="sidebar-navigation">
-        <li class="header">Navigation</li>
-        <li>
-          <a href="../index.html">
-            <i class="fa fa-file-alt" aria-hidden="true"></i> Home
-          </a>
-        </li>
-        <li>
-          <a href="../pages/competences.php.html">
-            <i class="fa fa-laptop-code" aria-hidden="true"></i> Mes compétences
-          </a>
-        </li>
-        <li>
-          <a href="../pages/experience.html">
-            <i class="fa fa-list" aria-hidden="true"></i> Mes expériences
-          </a>
-        </li>
-        <li>
-          <a href="../pages/projets.html">
-            <i class="fa fa-list" aria-hidden="true"></i> Projets
-          </a>
-        </li>
-        <li class="header">Résaux Sociaux</li>
-        <li>
-          <a href="https://github.com/Neguro">
-            <i class="fa fa-github" aria-hidden="true"></i> Github
-          </a>
-        </li>
-        <li>
-          <a href="https://fr.linkedin.com/in/nassim-ahmed-ali-38799417a">
-            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!------------------>
+include('../includes/sidebar.inc.php');
+?>
 
     <!-- Contenu -->
     <div class="content-container">
