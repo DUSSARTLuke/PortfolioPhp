@@ -57,12 +57,30 @@ class PdoPortfolio {
         return PdoPortfolio::$monPdoPortfolio;
     }
 
-    public function getLesPages(){
+    /**
+     * Fonction qui permet de récupérer les informations sur les pages 
+     * @param type $type 'nav' ou 'reseau'
+     * @return type
+     */
+    public function getLesPages($type = NULL){
       
-      $requetePrepare = PdoPortfolio::$monPdo->prepare(
+      if(isset($type)){
+        $requetePrepare = PdoPortfolio::$monPdo->prepare(
+            'SELECT * from pages where type= :type');
+        $requetePrepare->bindParam(':type', $type, PDO::PARAM_STR);
+      } else {
+        $requetePrepare = PdoPortfolio::$monPdo->prepare(
             'SELECT * from pages');
+      }
         $requetePrepare->execute();
         return $requetePrepare->fetchAll(PDO::FETCH_ASSOC);
-      //return $res->fetchAll();
+    }
+    
+    public function getLaPresentation($page){
+      $requete = PdoPortfolio::$monPdo->prepare(
+        'SELECT presentation from pages where libelle = :page');
+      $requete->bindParam(':page', $page, PDO::PARAM_STR);
+      $requete->execute();
+      return $requete->fetch(PDO::FETCH_ASSOC)['presentation'];
     }
 }

@@ -37,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="../pages/competences.html">
+          <a href="../pages/competences.php.html">
             <i class="fa fa-laptop-code" aria-hidden="true"></i> Mes compétences
           </a>
         </li>
