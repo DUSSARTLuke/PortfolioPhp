@@ -4,11 +4,13 @@ try {
   $pdo = PdoPortfolio::getPdoPortfolio();
   $pageActuelle = 'accueil';
   $presentation = $pdo->getLaPresentation($pageActuelle);
+  $lesExperiences = $pdo->getLesExperiences();
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
 
 include('../includes/sidebar.inc.php');
+print_r($lesExperiences);
 ?>
 
     <!-- Contenu -->
@@ -37,31 +39,17 @@ include('../includes/sidebar.inc.php');
             <div class=".col-12 .col-sm-6 .col-xs-6">
               <div class="jumbotron">
                 <div class="resume-section-content">
-                  <h2 class="display-5 text-center mt-4"><span class="fa fa-briefcase"></span> Mes expériences</h2>
+                  <h2 class="display-5 text-center mt-4"><span class="fa fa-briefcase"></span> Mes expériences </h2>
                   <hr class="my-4">
-                  <div class="experience clearfix">
-                    <div class="col-3">
-                      <div class="lieu">Optimum CIT</div>
-                      <div class="date">2020 (3 mois)</div>
-                    </div>
-                    <div class="col-9">
-                      <div class="profession">Developpement PHP Symfony 4</div>
-                      <div class="details">Création/mise en œuvre de bundles, création de services, création de commandes, respect de l'architecture MVC, création de templates avec Twig, gestion de la persistance avec Doctrine.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="experience clearfix">
-                    <div class="col-3">
-                      <div class="lieu">SCA Info</div>
-                      <div class="date">2019 (6 sem.)</div>
-                    </div>
-                    <div class="col-9">
-                      <div class="profession">Développement JEE</div>
-                      <div class="details">Création/mise en œuvre d'EJB (Entreprise Java Beans), persistance des données avec JPA, mise en oeuvre du framework MVC JSF (JavaServer Faces), création de composants graphique avec RichFaces.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  
+                    <?php foreach($lesExperiences as $experience){ 
+                      echo '<div class="experience clearfix"><div class="col-3">
+                      <div class="lieu">'.$experience['nom_entreprise'].'</div>'
+                        .'<div class="date">'.date('Y', strtotime($experience['date'])).'</div>'
+                      .'</div> <div class="col-9">
+                      <div class="profession">'.$experience['intitule'].'</div>'
+                        .'<div class="details">'.$experience['presentation'].'</div></div></div></div>';
+                    } ?>
               </div>
             </div>
           </div>

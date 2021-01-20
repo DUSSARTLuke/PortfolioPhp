@@ -76,11 +76,27 @@ class PdoPortfolio {
         return $requetePrepare->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    /**
+     * Fonction qui récupère la présentation de la page passée en paramètre
+     * @param type $page
+     * @return type
+     */
     public function getLaPresentation($page){
       $requete = PdoPortfolio::$monPdo->prepare(
         'SELECT presentation from pages where libelle = :page');
       $requete->bindParam(':page', $page, PDO::PARAM_STR);
       $requete->execute();
       return $requete->fetch(PDO::FETCH_ASSOC)['presentation'];
+    }
+    
+    /**
+     * Fonction qui permet de retourner mes différentes expériences professionnels
+     * @return type
+     */
+    public function getLesExperiences(){
+      $requete = PdoPortfolio::$monPdo->prepare(
+        'SELECT * from experience');
+      $requete->execute();
+      return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 }
