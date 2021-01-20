@@ -7,6 +7,8 @@ try {
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
+
+print_r($lesPagesNav);
 ?>
 <!DOCTYPE html>
 <html lang="fr">

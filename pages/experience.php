@@ -10,7 +10,6 @@ try {
 }
 
 include('../includes/sidebar.inc.php');
-print_r($lesExperiences);
 ?>
 
     <!-- Contenu -->
