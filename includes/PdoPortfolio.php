@@ -95,7 +95,15 @@ class PdoPortfolio {
      */
     public function getLesExperiences(){
       $requete = PdoPortfolio::$monPdo->prepare(
-        'SELECT * from experience');
+        'SELECT * from experience order by date desc');
+      $requete->execute();
+      return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    
+    public function getLesParcours(){
+      $requete = PdoPortfolio::$monPdo->prepare(
+        'SELECT * from parcours_sco order by date_obtention desc');
       $requete->execute();
       return $requete->fetchAll(PDO::FETCH_ASSOC);
     }

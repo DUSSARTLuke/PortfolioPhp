@@ -1,3 +1,8 @@
+/**********************
+*** Navigation Sidebar
+**********************/
+
+
 .sidebar-container {
     position: fixed;
     width: 220px;
@@ -17,7 +22,7 @@
 .sidebar-logo {
     padding: 10px 15px 10px 30px;
     font-size: 20px;
-    background-color: #2574A9;
+    background-color: #DC143C;
 }
 
 .sidebar-navigation {
@@ -83,14 +88,6 @@
 .content-container {
     padding-left: 220px;
 }
-
-.carousel-page {
-    width: 100%;
-    height: 400px;
-    background-color: #5f666d;
-    color: white;
-}
-
 
 
 /****************************************

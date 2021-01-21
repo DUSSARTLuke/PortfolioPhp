@@ -5,6 +5,7 @@ try {
   $pageActuelle = 'accueil';
   $presentation = $pdo->getLaPresentation($pageActuelle);
   $lesExperiences = $pdo->getLesExperiences();
+  $lesParcours = $pdo->getLesParcours();
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -47,7 +48,7 @@ include('../includes/sidebar.inc.php');
                         .'<div class="date">'.date('Y', strtotime($experience['date'])).'</div>'
                       .'</div> <div class="col-9">
                       <div class="profession">'.$experience['intitule'].'</div>'
-                        .'<div class="details">'.$experience['presentation'].'</div></div></div></div>';
+                        .'<div class="details">'.$experience['presentation'].'</div></div></div>';
                     } ?>
               </div>
             </div>
@@ -62,34 +63,13 @@ include('../includes/sidebar.inc.php');
                   <h2 class="display-5 text-center mt-4"><span class="fa fa-graduation-cap "></span>Mon parcours scolaire</h2>
                   <hr class="my-5">
                   <ul id="parcours" class="clearfix">
-                    <li>
+                    <?php foreach($lesParcours as $leParcours){
+                      echo '<li>
                       <div class="date float-left">
-                        <span class="fa fa-stop-circle"></span>&nbsp;2020
-                      </div>
-                      <div class="details float-right">
-                        <h3>BTS SIO option SLAM (en cours...)</h3>
-                        <p>Brevet de Technicien Supérieur "Services Informatiques aux Organisations ", option "Solutions Logicielles et Applications Métiers "
-                        </p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="date float-left">
-                        <span class="fa fa-stop-circle"></span>&nbsp;2017
-                      </div>
-                      <div class="details float-right">
-                        <h3>Bac ES spécialité mathématiques</h3>
-                        <p>Baccalauréat "Economique et social " spécialité Mathématiques - Obtenu avec mention Très Bien </p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="date float-left">
-                        <span class="fa fa-stop-circle"></span>&nbsp;2014
-                      </div>
-                      <div class="details float-right">
-                        <h3>Diplôme Nationale du Brevet</h3>
-                        <p>Obtenu avec mention Très Bien </p>
-                      </div>
-                    </li>
+                        <span class="fa fa-stop-circle"></span>&nbsp;'.date("Y", strtotime($leParcours['date_obtention'])).
+                        '</div><div class="details float-right"><h3>'.$leParcours['intitule']. ' |</h3><h5 class="text-primary"> '. $leParcours['etat'].
+                        '</h5><p>'.$leParcours['description']. '</p></div></li>';
+                    }?>
                   </ul></div>
               </div>
             </div>
