@@ -14,7 +14,7 @@ try {
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Luke DUSSART">
-    <title>Portfolio | DUSSART Luke</title
+    <title>Portfolio | DUSSART Luke</title>
     <meta content="Portfolio de Luke DUSSART, étudiant en BTS SIO à Toulon" name="description">
     <link rel="icon" href="images/favicon.png" src="https://icones8.fr/icons/set/libre-de-droits">
     <!-- Theme Bootstrap -->
