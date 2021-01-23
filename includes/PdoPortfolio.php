@@ -100,11 +100,22 @@ class PdoPortfolio {
       return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    
+    /**
+     *  Fonction qui permet de récupérer les éléments de mon parcours scolaire 
+     * @return type
+     */
     public function getLesParcours(){
       $requete = PdoPortfolio::$monPdo->prepare(
         'SELECT * from parcours_sco order by date_obtention desc');
       $requete->execute();
+      return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    
+    public function getLesCompGen(){
+      $requete  = PdoPortfolio::$monPdo->prepare(
+        'SELECT * from competence_gen ');
+      $requete ->execute();
       return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 }

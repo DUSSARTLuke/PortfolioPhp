@@ -4,6 +4,7 @@ try {
   $pdo = PdoPortfolio::getPdoPortfolio();
   $pageActuelle = 'accueil';
   $presentation = $pdo->getLaPresentation($pageActuelle);
+  $lesCompGen = $pdo->getLesCompGen();
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -19,24 +20,13 @@ include('../includes/sidebar.inc.php');
             <div class="jumbotron">
               <h2 class="display-5 text-danger">Mes compétences générales</h2>
               <hr class="my-4">
-              <div class="container">
-                <h5>Informatique</h5>
-                <div class="border border-dark progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="container">
-                <h5>Mathématiques</h5>
-                <div class="border border-dark progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-                </div>
-              </div>
-              <div class="container">
-                <h5>Economique</h5>
-                <div class="border border-dark progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-                </div>
-              </div>
+                <?php foreach($lesCompGen as $compGen){
+                  echo '<div class="container"><h5>'.$compGen['libelle'].
+                    '</h5><div class="border border-dark progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-'.$compGen['class'].
+                    '" role="progressbar" aria-valuenow="'.$compGen['taille'].'" aria-valuemin="0" aria-valuemax="100" style="width: '
+                      .$compGen['taille'].'%"></div></div></div>';
+                } ?>
             </div>
           </div>
         </div>

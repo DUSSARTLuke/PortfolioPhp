@@ -123,6 +123,38 @@ INSERT into parcours_sco (`id`, `date_obtention`, `intitule`, `etat`, `descripti
 ALTER TABLE `parcours_sco`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Structure de la table `competence_gen`
+--
+
+CREATE table `competence_gen`(
+  `id` int(11) NOT NULL auto_increment,
+  `libelle` varchar(100) NOT NULL,
+  `taille` int NOT NULL,
+  `class` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `competennce_gen`
+--
+
+INSERT into competence_gen (`id`, `libelle`, `taill`, `class`) values
+(NULL, 'informatique', 80, 'success'),
+(NULL, 'mathématiques', 70, 'danger'),
+(NULL, 'economie', 65, 'primary');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `parcours_sco`
+--
+ALTER TABLE `competence_gen`
+  ADD PRIMARY KEY (`id`);
+
+
+
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
