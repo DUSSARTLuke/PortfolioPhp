@@ -9,11 +9,12 @@ try {
   echo 'Erreur : ' . $e->getMessage();
 }
 
-include('../includes/sidebar.inc.php');
+include('../includes/navbar.php');
+include('../includes/footer.php');
 ?>
 
     <!-- Contenu -->
-    <div class="content-container">
+    <div class="container">
       <div class="container-fluid">
         <div class="container text-center">
           <div class=".col-12 .col-sm-6 .col-xs-6">

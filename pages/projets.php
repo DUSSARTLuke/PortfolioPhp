@@ -8,62 +8,85 @@ try {
   echo 'Erreur : ' . $e->getMessage();
 }
 
-include('../includes/sidebar.inc.php');
+include('../includes/navbar.php');
+include('../includes/footer.php');
 ?>
 
-    <div class=" content-container ">
-      <div id="myCarousel" class="carousel slide border" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active img-fluid">
-            <img class="d-block w-100" src="../images/ihmcoach.png" alt="Leopard">
-            <div class="carousel-caption">
-              <h5>Leopard</h5>
-              <small>
-                A black Panther is the melanistic color variant of any big cat species.
-                Black Panthers in Asia and Africa are leopards (Panthera pardus).
-              </small>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../images/carousel-img-2.jpg" alt="Cat">
-            <div class="carousel-caption">
-              <h5>Black Cat</h5>
-              <small>
-                A black cat is a domestic cat with black fur that may be a mixed or specific breed
-              </small>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../images/carousel-img-3.jpg" alt="Lion">
-            <div class="carousel-caption">
-              <h5>Lion</h5>
-              <small>
-                The lion (Panthera leo) is a species in the cat family (Felidae).
-                A muscular, deep-chested cat, it has a short, rounded head, a reduced neck and round ears
-              </small>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <div class="footer fixed-bottom" style="background-color: #375a7f;">
-        <div class="container">
-          <p style="text-align: center;">Crée par DUSSART Luke - 2020 | Etudiant en BTS SIO | Mail pro : <a href="mailto:lukedussart@hotmail.fr">lukedussart@hotmail.fr</a></p>
+<div class="container ">
+  <!-- <div class="col-md-4">
+    <div class="card border-left-primary shadow h-100 py-2" data-toggle="modal" data-target="#navire">
+      <div class="card-body">
+        <div class="text-center">
+          <img class="card-img img-responsive" src="../images/projets/navire/iconTitle.png" style="width: 50px;" alt="Card image">
+          <h3> Gestion des navires (Symfony) </h3>
         </div>
       </div>
     </div>
-  </body>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-</html>
+  </div>
+  <div class="col-md-4">
+    <div class="card border-left-primary shadow h-100 py-2" data-toggle="modal" data-target="#gsb">
+      <div class="card-body">
+        <div class="text-center">
+          <img class="card-img img-responsive" src="../images/projets/gsb/logo.jpg" style="width: 50px;" alt="Card image">
+          <h3> GSB </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card border-left-primary shadow h-100 py-2" data-toggle="modal" data-target="#nolark">
+      <div class="card-body">
+        <div class="text-center">
+          <img class="card-img img-responsive" src="../images/projets/navire/iconTitle.png" style="width: 50px;" alt="Card image">
+          <h3> Nolark </h3>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="row grid-container">
+    <div class="col-12 col-md-6 col-lg-4 element" data-link="https://www.virginieclaude.fr/projets/nolark/" style="background-image:url(https://www.virginieclaude.fr/uploads/2020/05/screenshot-400x400.jpg)">
+      <div class="infos">
+        <h4>Nolark</h4>
+        <h5><a href="https://www.virginieclaude.fr/categorie-projet/back-end/" rel="tag">Back-end</a> & <a href="https://www.virginieclaude.fr/categorie-projet/front-end/" rel="tag">Front-end</a></h5>
+      </div>
+    </div> -->
+</div>
+  
+  <div id="navire" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header card-header-title">
+          <h4 class="modal-title card-element-title">pick your locker side</h4>
+        </div>
+        <div class="modal-body">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="../images/projets/navire/iconTitle.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../images/projets/navire/iconTitle.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../images/projets/navire/iconTitle.png" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
