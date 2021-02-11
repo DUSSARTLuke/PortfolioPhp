@@ -15,7 +15,7 @@ include('../includes/footer.php');
 ?>
 
     <!-- Contenu -->
-    <div class="container">
+    <div class="container content">
       <div class="container-fluid">
         <div class="container">
           <div class=".col-12 .col-sm-6 .col-xs-8">

@@ -12,7 +12,7 @@ include('../includes/navbar.php');
 include('../includes/footer.php');
 ?>
 
-<div class="container ">
+<div class="container content">
   <!-- <div class="col-md-4">
     <div class="card border-left-primary shadow h-100 py-2" data-toggle="modal" data-target="#navire">
       <div class="card-body">

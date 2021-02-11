@@ -13,12 +13,12 @@ include('./includes/footer.php');
 ?>
 
 <!-- Contenu -->
-<div class="container">
+<div class="container content">
   <div class="container-fluid">
-    <div class="container">
+    <div class="container text-center">
       <div class=".col-12 .col-sm-6 .col-xs-8">
         <div class="jumbotron">
-          <h2 class="display-5 text-center">Bienvenue dans mon Portfolio</h2>
+          <h1 class="display-5 text-danger fas"> Bienvenue dans mon Portfolio</h1>
           <hr class="my-4">
           <div class="row">
             <div class="container-fluid">
@@ -35,13 +35,13 @@ include('./includes/footer.php');
     <div class="container text-center">
       <div class=".col-12 .col-sm-6 .col-xs-6">
         <div class="jumbotron">
-          <h2 class="display-5 text-danger">Mes qualités</h2>
+          <h2 class="display-5 text-danger fas fa-address-card"> Mes qualités</h2>
           <hr class="my-4">
           <div class="container d-flex flex-column">
-            <h5 class="fa fa-check-square text-light"> Curieux </h5>
-            <h5 class="fa fa-check-square text-light"> Perfectionniste </h5>
-            <h5 class="fa fa-check-square text-light"> Esprit d'équipe </h5>
-            <h5 class="fa fa-check-square text-light"> Adaptabilité </h5>
+            <h5 class="fa fa-check-square text-dark"> Curieux </h5>
+            <h5 class="fa fa-check-square text-dark"> Perfectionniste </h5>
+            <h5 class="fa fa-check-square text-dark"> Esprit d'équipe </h5>
+            <h5 class="fa fa-check-square text-dark"> Adaptabilité </h5>
           </div>
         </div>
       </div>
@@ -49,39 +49,39 @@ include('./includes/footer.php');
     <div class="container text-center">
       <div class=".col-12 .col-sm-6 .col-xs-6">
         <div class="jumbotron">
-          <h2 class="display-5 text-danger fa fa-flag">Langues</h2>
+          <h2 class="display-5 text-danger fa fa-flag"> Langues</h2>
           <hr class="my-4">
           <div class="container">
             <div class="langue">Français</div>
             <div class="niveau">
-              <span class="badge badge-light">A1</span>
-              <span class="badge badge-light">A2</span>
-              <span class="badge badge-light">B1</span>
-              <span class="badge badge-light">B2</span>
-              <span class="badge badge-light">C1</span>
-              <span class="badge badge-success">C2</span>
+              <span class="badge bg-dark">A1</span>
+              <span class="badge bg-dark">A2</span>
+              <span class="badge bg-dark">B1</span>
+              <span class="badge bg-dark">B2</span>
+              <span class="badge bg-dark">C1</span>
+              <span class="badge bg-success">C2</span>
             </div>
           </div>
           <div class="container">
             <div class="langue">Anglais</div>
             <div class="niveau">
-              <span class="badge badge-light">A1</span>
-              <span class="badge badge-light">A2</span>
-              <span class="badge badge-light">B1</span>
-              <span class="badge badge-success">B2</span>
-              <span class="badge badge-light">C1</span>
-              <span class="badge badge-light">C2</span>
+              <span class="badge bg-dark">A1</span>
+              <span class="badge bg-dark">A2</span>
+              <span class="badge bg-dark">B1</span>
+              <span class="badge bg-success">B2</span>
+              <span class="badge bg-dark">C1</span>
+              <span class="badge bg-dark">C2</span>
             </div>
           </div>
           <div class="container">
             <div class="langue">Espagnol</div>
             <div class="niveau">
-              <span class="badge badge-light">A1</span>
-              <span class="badge badge-light">A2</span>
-              <span class="badge badge-light">B1</span>
-              <span class="badge badge-light">B2</span>
-              <span class="badge badge-success">C1</span>
-              <span class="badge badge-light">C2</span>
+              <span class="badge bg-dark">A1</span>
+              <span class="badge bg-dark">A2</span>
+              <span class="badge bg-dark">B1</span>
+              <span class="badge bg-dark">B2</span>
+              <span class="badge bg-success">C1</span>
+              <span class="badge bg-dark">C2</span>
             </div>
           </div>
         </div>
@@ -90,11 +90,5 @@ include('./includes/footer.php');
   </div>
 </div>
 
-<!-- Pied de page/footer -->
-<div class="footer fixed-bottom" style="background-color: #375a7f;">
-  <div class="container">
-    <p style="text-align: center;">Crée par DUSSART Luke - 2020 | Etudiant en BTS SIO | Mail pro : <a href="mailto:lukedussart@hotmail.fr">lukedussart@hotmail.fr</a></p>
-  </div>
-</div>
 </body>
 </html>

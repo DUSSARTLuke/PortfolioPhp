@@ -14,7 +14,7 @@ include('../includes/footer.php');
 ?>
 
     <!-- Contenu -->
-    <div class="container">
+    <div class="container content">
       <div class="container-fluid">
         <div class="container text-center">
           <div class=".col-12 .col-sm-6 .col-xs-6">
@@ -36,21 +36,21 @@ include('../includes/footer.php');
             <div class="jumbotron">
               <h2 class="display-5 text-danger">Mes compétences informatiques</h2>
               <hr class="my-4">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a href="#devWeb" class="nav-link active" data-toggle="tab">Développement Web</a>
+              <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active compDev" id="devWeb-tab" data-bs-toggle="pill" data-bs-target="#devWeb" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Développement Web</button>
                 </li>
-                <li class="nav-item">
-                  <a href="#devLog" class="nav-link" data-toggle="tab">Développement logiciel</a>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link compDev" id="devLog-tab" data-bs-toggle="pill" data-bs-target="#devLog" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Développement logiciel</button>
                 </li>
-                <li class="nav-item">
-                  <a href="#ide" class="nav-link" data-toggle="tab">IDE</a>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link compDev" id="ide-tab" data-bs-toggle="pill" data-bs-target="#ide" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">IDE</button>
                 </li>
-                <li class="nav-item">
-                  <a href="#OS" class="nav-link" data-toggle="tab">Système d'exploitation</a>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link compDev" id="OS-tab" data-bs-toggle="pill" data-bs-target="#OS" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Système d'exploitation</button>
                 </li>
-                <li class="nav-item">
-                  <a href="#outilsInfo" class="nav-link" data-toggle="tab">Outils informatiques</a>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link compDev" id="outilsInfo-tab" data-bs-toggle="pill" data-bs-target="#outilsInfo" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Outils informatiques</button>
                 </li>
               </ul>
               <div class="tab-content">
