@@ -79,12 +79,7 @@ include('../includes/footer.php');
       </div>
       <br>
 
-      <!-- Pied de page/footer -->
-      <div class="footer fixed-bottom" style="background-color: #375a7f;">
-        <div class="container">
-          <p style="text-align: center;">Crée par DUSSART Luke - 2020 | Etudiant en BTS SIO | Mail pro : <a href="mailto:lukedussart@hotmail.fr">lukedussart@hotmail.fr</a></p>
-        </div>
-      </div>
+      
     </div>
   </body>
 </html>
