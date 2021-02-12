@@ -50,6 +50,90 @@ include('../includes/footer.php');
         <h5><a href="https://www.virginieclaude.fr/categorie-projet/back-end/" rel="tag">Back-end</a> & <a href="https://www.virginieclaude.fr/categorie-projet/front-end/" rel="tag">Front-end</a></h5>
       </div>
     </div> -->
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">GSB - Gestion des fiches de frais</h5>
+            <p class="card-text text-center">
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </p>  
+          </div>
+        </div> 
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/projets/gsb/gsb_mobile.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">GSB - Saisie des frais de visite</h5>
+            <p class="card-text text-center">
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </p>
+          </div>
+        </div> 
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/projets/gsb/Logo-gsb.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">GSB - Clôture des fiches de frais</h5>
+            <p class="card-text text-center">
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </p>
+          </div>
+        </div> 
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/projets/nolark/logo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nolark</h5>
+            <p class="card-text text-center">
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="card col-sm-4">
+        <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GSB - Gestion des fiches de frais</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Voir le projet</a>
+        </div>
+      </div> 
+      <div class="card col-sm-4">
+        <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GSB - Gestion des fiches de frais</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Voir le projet</a>
+        </div>
+      </div> 
+      <div class="card col-sm-4">
+        <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GSB - Gestion des fiches de frais</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Voir le projet</a>
+        </div>
+      </div>
+    </div> 
+    <div class="card" style="width: 30%">
+      <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">GSB - Gestion des fiches de frais</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Voir le projet</a>
+      </div>
+    </div> -->
+
 </div>
   
   <div id="navire" class="modal fade" role="dialog">

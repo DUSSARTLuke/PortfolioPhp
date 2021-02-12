@@ -305,3 +305,18 @@
     background-repeat: no-repeat;
     transition: background-color ease-in-out 0.2s;
 }
+
+
+.card {
+    height: 325px!important;
+}
+.card p {
+    position: absolute;
+    top: 85%;
+    left: 30%
+}
+
+.card-img-top{
+    height: 200px;
+    width: auto;
+}
