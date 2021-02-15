@@ -40,7 +40,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;" src="../images/dussartluke.jpg" alt="Image d'un jeune stressé et beau "></a>
+    <a class="navbar-brand" href="#"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;" <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,7 +50,9 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           echo '<li class="nav-item">';
           if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
             echo '<a class="nav-link active" aria-current="page" href="">';
-          }  else {
+          }  else if(in_array($pageActuelle, $projets)){
+            echo '<a class="nav-link" href="../'.$laPage['lien'].'">';
+          } else { 
             echo '<a class="nav-link" href="'.$laPage['lien'].'">';
           }
           echo $laPage['libelle'].'</a></li>';
