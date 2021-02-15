@@ -138,7 +138,7 @@ CREATE table `competence_gen`(
 -- Déchargement des données de la table `competennce_gen`
 --
 
-INSERT into competence_gen (`id`, `libelle`, `taill`, `class`) values
+INSERT into competence_gen (`id`, `libelle`, `taille`, `class`) values
 (NULL, 'informatique', 80, 'success'),
 (NULL, 'mathématiques', 70, 'danger'),
 (NULL, 'economie', 65, 'primary');
@@ -151,6 +151,71 @@ INSERT into competence_gen (`id`, `libelle`, `taill`, `class`) values
 -- Index pour la table `parcours_sco`
 --
 ALTER TABLE `competence_gen`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Structure de la table `competence_info`
+--
+
+CREATE table `competence_info`(
+  `id` int(11) NOT NULL auto_increment,
+  `libelle` varchar(100) NOT NULL,
+  `lien` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `competennce_gen`
+--
+
+INSERT into competence_info (`id`, `libelle`, `lien`) values
+(NULL, 'Développement Web', 'devWeb'),
+(NULL, 'Développement logiciel', 'devLog'),
+(NULL, 'IDE', 'ide'),
+(NULL, 'Système d\'exploitation', 'OS'),
+(NULL, 'Outils informatiques', 'outilsInfo');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `competence_info`
+--
+ALTER TABLE `competence_info`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Structure de la table `competence_dev_web`
+--
+
+CREATE table `competence_dev_web`(
+  `id` int(11) NOT NULL auto_increment,
+  `libelle` varchar(100) NOT NULL,
+  `taille` int NOT NULL,
+  `icone` varchar(100) NOT NULL  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `competence_dev_web`
+--
+
+INSERT into competence_dev_web (`id`, `libelle`, `taille`, `icone`) values
+(NULL, 'HTML5', 80, 'devicon-html5-plain-wordmark'),
+(NULL, 'Twitter Bootstrap', 70, 'devicon-bootstrap-plain-wordmark'),
+(NULL, 'CSS3', 50, 'devicon-css3-plain-wordmark competence-logo'),
+(NULL, 'JavaScript', 65, 'devicon-javascript-plain'),
+(NULL, 'Jquery', 60, 'devicon-jquery-plain-wordmark'),
+(NULL, 'PHP', 80, 'devicon-php-plain'),
+(NULL, 'symfony', 72, 'devicon-symfony-original-wordmark');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `competence_dev_web`
+--
+ALTER TABLE `competence_dev_web`
   ADD PRIMARY KEY (`id`);
 
 
