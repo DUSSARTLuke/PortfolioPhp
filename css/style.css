@@ -320,3 +320,7 @@
     height: 200px;
     width: auto;
 }
+
+.row{
+    padding-bottom: 15px!important;;
+}

@@ -77,9 +77,9 @@ CREATE table `experience`(
 --
 
 Insert into experience (`id`, `nom_entreprise`, `date`, `intitule`, `presentation`) values
-(NULL, 'Optimum CIT', '2020-05-01', 'Développement PHP Symfony 4', 'Création/mise en œuvre de bundles, création de services, création de commandes, respect de l\'architecture MVC, création de templates avec Twig, gestion de la persistance avec Doctrine.'),
-(NULL, 'BNP Paribas PF', '2019-07-01', 'Auxiliaire de vacances', 'Traitement des dossiers arrivés sur une application web de courtage, vérification des données et transmission des dossiers au service d\'étude'),
-(NULL, 'Love Radius', '2021-01-11', 'Développement web', 'Création de nouvelles interfaces graphiques, de MCD dirigé à l\'élaboration de tables de base de données, utilisation de langage tel que HTML, CSS, PHP, JS, SQL');
+(NULL, 'Optimum CIT', '2020-05-01', 'Développement PHP Symfony 4', "Création/mise en œuvre de bundles, création de services, création de commandes, respect de l'architecture MVC, création de templates avec Twig, gestion de la persistance avec Doctrine."),
+(NULL, 'BNP Paribas PF', '2019-07-01', 'Auxiliaire de vacances', "Traitement des dossiers arrivés sur une application web de courtage, vérification des données et transmission des dossiers au service d'étude"),
+(NULL, 'Love Radius', '2021-01-11', 'Développement web', "Création de nouvelles interfaces graphiques, de MCD dirigé à l'élaboration de tables de base de données, utilisation de langage tel que HTML, CSS, PHP, JS, SQL");
 
 --
 -- Index pour les tables déchargées
@@ -171,7 +171,7 @@ INSERT into competence_info (`id`, `libelle`, `lien`) values
 (NULL, 'Développement Web', 'devWeb'),
 (NULL, 'Développement logiciel', 'devLog'),
 (NULL, 'IDE', 'ide'),
-(NULL, 'Système d\'exploitation', 'OS'),
+(NULL, "Système d'exploitation", 'OS'),
 (NULL, 'Outils informatiques', 'outilsInfo');
 
 --
@@ -185,37 +185,58 @@ ALTER TABLE `competence_info`
   ADD PRIMARY KEY (`id`);
 
 --
--- Structure de la table `competence_dev_web`
+-- Structure de la table `competence_info_spe`
 --
 
-CREATE table `competence_dev_web`(
+CREATE table `competence_info_spe`(
   `id` int(11) NOT NULL auto_increment,
   `libelle` varchar(100) NOT NULL,
   `taille` int NOT NULL,
-  `icone` varchar(100) NOT NULL  
+  `icone` varchar(100) NOT NULL,
+  `type` int(11) not null  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `competence_dev_web`
+-- Déchargement des données de la table `competence_info_spe`
 --
 
-INSERT into competence_dev_web (`id`, `libelle`, `taille`, `icone`) values
-(NULL, 'HTML5', 80, 'devicon-html5-plain-wordmark'),
-(NULL, 'Twitter Bootstrap', 70, 'devicon-bootstrap-plain-wordmark'),
-(NULL, 'CSS3', 50, 'devicon-css3-plain-wordmark competence-logo'),
-(NULL, 'JavaScript', 65, 'devicon-javascript-plain'),
-(NULL, 'Jquery', 60, 'devicon-jquery-plain-wordmark'),
-(NULL, 'PHP', 80, 'devicon-php-plain'),
-(NULL, 'symfony', 72, 'devicon-symfony-original-wordmark');
+INSERT into competence_info_spe (`id`, `libelle`, `taille`, `icone`, `type`) values
+(NULL, 'HTML5', 80, 'devicon-html5-plain-wordmark', '1'),
+(NULL, 'Twitter Bootstrap', 70, 'devicon-bootstrap-plain-wordmark', '1'),
+(NULL, 'CSS3', 50, 'devicon-css3-plain-wordmark competence-logo', '1'),
+(NULL, 'JavaScript', 65, 'devicon-javascript-plain', '1'),
+(NULL, 'Jquery', 60, 'devicon-jquery-plain-wordmark', '1'),
+(NULL, 'PHP', 80, 'devicon-php-plain', '1'),
+(NULL, 'symfony', 72, 'devicon-symfony-original-wordmark', '1'),
+(NULL, 'C#', 65, 'devicon-csharp-plain', '2'),
+(NULL, 'Java', 50, 'devicon-java-plain-wordmark', '2'),
+(NULL, 'python', 60, 'devicon-python-plain-wordmark', '2'),
+(NULL, 'JetBrains', 65, 'devicon-jetbrains-plain-wordmark', '3'),
+(NULL, 'Oracle Sql Developer', 80, 'devicon-oracle-original', '3'),
+(NULL, 'PHP Storm', 75, 'devicon-phpstorm-plain-wordmark', '3'),
+(NULL, 'Visual Studio', 85, 'devicon-visualstudio-plain-wordmark', '3'),
+(NULL, 'Android', 70, 'devicon-android-plain-wordmark', '4'),
+(NULL, 'Debian', 55, 'devicon-debian-plain-wordmark', '4'),
+(NULL, 'Windows 10', 85, 'devicon-windows8-original', '4'),
+(NULL, 'Google chrome', 75, 'devicon-chrome-plain-wordmark', '5'),
+(NULL, 'composer', 70, 'devicon-composer-line-wordmark', '5'),
+(NULL, 'Firefox', 75, 'devicon-firefox-plain-wordmark', '5'),
+(NULL, 'Git', 85, 'devicon-git-plain-wordmark', '5'),
+(NULL, 'Github', 85, 'devicon-github-original-wordmark', '5'),
+(NULL, 'GitLab', 75, 'devicon-gitlab-plain-wordmark', '5'),
+(NULL, 'MySql', 90, 'devicon-mysql-plain-wordmark', '5'),
+(NULL, 'Postgresql', 85, 'devicon-postgresql-plain-wordmark', '5'),
+(NULL, 'Slack', 65, 'devicon-slack-plain-wordmark', '5'),
+(NULL, 'Trello', 75, 'devicon-trello-plain-wordmark', '5');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `competence_dev_web`
+-- Index pour la table `competence_info_spe`
 --
-ALTER TABLE `competence_dev_web`
+ALTER TABLE `competence_info_spe`
   ADD PRIMARY KEY (`id`);
 
 

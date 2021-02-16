@@ -5,7 +5,11 @@ try {
   $pageActuelle = 'accueil';
   $presentation = $pdo->getLaPresentation($pageActuelle);
   $lesCompGen = $pdo->getLesCompGen();
-  $lesCompDevWeb = $pdo->getLesCompdevWeb();
+  $lesCompDevWeb = $pdo->getLesCompInfoSpe(1);
+  $lesCompDevLog = $pdo->getLesCompInfoSpe(2);
+  $lesCompIde = $pdo->getLesCompInfoSpe(3);
+  $lesCompOS = $pdo->getLesCompInfoSpe(4);
+  $lesCompOutilsInfo = $pdo->getLesCompInfoSpe(5);
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -60,88 +64,25 @@ include('../includes/footer.php');
                     <h5> Développement web</h5>
                     <hr class="my-3">
                     <div class="competences">
-                        <? foreach($lesCompDevWeb as $devWeb){
-                          if($devWeb['taille'] <50){
-                            $class = 'bg-danger';
-                          } else if ($devWeb['taille'] <50){
-                            $class = 'bg-warning';
-                          } else if($devWeb['taille'] <50) {
-                            $class = 'bg-success';
-                          } else if ($devWeb['taille'] <50){
-                            $class = 'bg-primary';
-                          } else if($devWeb['taille']){
-                            $class = 'bg-info';
-                          }
-                          echo '<div class="row"><div class="col-md-2">
-                          <i class="'.$devWeb['icone'].'" title="'.$devWeb['libelle'].'"></i></div>
-                          <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$devWeb['taille'].'" aria-valuemin="0"
+                        <?php foreach($lesCompDevWeb as $devWeb){
+                          $class = "";
+                          if($devWeb['taille'] < 50){$class = 'bg-danger';}
+                          else if ($devWeb['taille'] < 60){$class = 'bg-warning';} 
+                          else if($devWeb['taille'] < 70) {$class = 'bg-success';} 
+                          else if ($devWeb['taille'] < 80){$class = 'bg-primary';} 
+                          else if($devWeb['taille']){$class = 'bg-info';}
+                          echo '
+                          <div class="row">
+                            <div class="col-md-2">
+                            <i class="'.$devWeb['icone'].'" title="'.$devWeb['libelle'].'"></i></div>
+                            <div class="col-md-10">
+                             <div class="border border-dark progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$devWeb['taille'].'" aria-valuemin="0"
                              aria-valuemax="100" style="width:'.$devWeb['taille'].'%">'.$devWeb['taille'].'%</div>
+                              </div>
                             </div>
-                          </div>
-                        </div>';
+                          </div>';
                           }?>
-                      <!-- <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-bootstrap-plain-wordmark" title="Twitter Bootstrap"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-css3-plain-wordmark competence-logo" title="CSS3"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-javascript-plain" title="JavaScript"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">65%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-jquery-plain-wordmark" title="Jquery"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-php-plain" title="PHP"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-symfony-original-wordmark" title="symfony"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">72%</div>
-                          </div>
-                        </div>
-                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -150,35 +91,25 @@ include('../includes/footer.php');
                     <h5> Développement logiciel </h5>
                     <hr class="my-3">
                     <div class="competences">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-csharp-plain" title="C#"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">65%</div>
-                          </div>
-                        </div>
-                      </div><div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-java-plain-wordmark" title="Java"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-python-plain-wordmark" title="python"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%</div>
-                          </div>
-                        </div>
-                      </div>
+                      <?php foreach($lesCompDevLog as $devLog){
+                          $class = "";
+                          if($devLog['taille'] < 50){$class = 'bg-danger';}
+                          else if ($devLog['taille'] < 60){$class = 'bg-warning';} 
+                          else if($devLog['taille'] < 70) {$class = 'bg-success';} 
+                          else if ($devLog['taille'] < 80){$class = 'bg-primary';} 
+                          else if($devLog['taille']){$class = 'bg-info';}
+                          echo '
+                          <div class="row">
+                            <div class="col-md-2">
+                            <i class="'.$devLog['icone'].'" title="'.$devLog['libelle'].'"></i></div>
+                            <div class="col-md-10">
+                             <div class="border border-dark progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$devLog['taille'].'" aria-valuemin="0"
+                             aria-valuemax="100" style="width:'.$devLog['taille'].'%">'.$devLog['taille'].'%</div>
+                              </div>
+                            </div>
+                          </div>';
+                        }?>
                     </div>
                   </div>
                 </div>
@@ -187,46 +118,25 @@ include('../includes/footer.php');
                     <h5> Connaissance environnement de développement </h5>
                     <hr class="my-3">
                     <div class="competences">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-jetbrains-plain-wordmark" title="JetBrains"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">65%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-oracle-original" title="Oracle Sql Developer"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-phpstorm-plain-wordmark" title="PHP Storm"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-visualstudio-plain-wordmark" title="Visual Studio"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
-                          </div>
-                        </div>
-                      </div>
+                      <?php foreach($lesCompIde as $ide){
+                          $class = "";
+                          if($ide['taille'] < 50){$class = 'bg-danger';}
+                          else if ($ide['taille'] < 60){$class = 'bg-warning';} 
+                          else if($ide['taille'] < 70) {$class = 'bg-success';} 
+                          else if ($ide['taille'] < 80){$class = 'bg-primary';} 
+                          else if($ide['taille']){$class = 'bg-info';}
+                          echo '
+                          <div class="row">
+                            <div class="col-md-2">
+                            <i class="'.$ide['icone'].'" title="'.$ide['libelle'].'"></i></div>
+                            <div class="col-md-10">
+                             <div class="border border-dark progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$ide['taille'].'" aria-valuemin="0"
+                             aria-valuemax="100" style="width:'.$ide['taille'].'%">'.$ide['taille'].'%</div>
+                              </div>
+                            </div>
+                          </div>';
+                      }?>
                     </div>
                   </div>
                 </div>
@@ -235,36 +145,25 @@ include('../includes/footer.php');
                     <h5> Système d'exploitation</h5>
                     <hr class="my-3">
                     <div class="competences">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-android-plain-wordmark" title="Android"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-debian-plain-wordmark" title="Debian"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%">55%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-windows8-original" title="Windows 10"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
-                          </div>
-                        </div>
-                      </div>
+                      <?php foreach($lesCompOS as $os){
+                          $class = "";
+                          if($os['taille'] < 50){$class = 'bg-danger';}
+                          else if ($os['taille'] < 60){$class = 'bg-warning';} 
+                          else if($os['taille'] < 70) {$class = 'bg-success';} 
+                          else if ($os['taille'] < 80){$class = 'bg-primary';} 
+                          else if($os['taille']){$class = 'bg-info';}
+                          echo '
+                          <div class="row">
+                            <div class="col-md-2">
+                            <i class="'.$os['icone'].'" title="'.$os['libelle'].'"></i></div>
+                            <div class="col-md-10">
+                             <div class="border border-dark progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$os['taille'].'" aria-valuemin="0"
+                             aria-valuemax="100" style="width:'.$os['taille'].'%">'.$os['taille'].'%</div>
+                              </div>
+                            </div>
+                          </div>';
+                      }?>
                     </div>
                   </div>
                 </div>
@@ -273,106 +172,25 @@ include('../includes/footer.php');
                     <h5> Outils informatiques </h5>
                     <hr class="my-3">
                     <div class="competences">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-chrome-plain-wordmark" title="Google chrome"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-composer-line-wordmark" title="composer"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-firefox-plain-wordmark" title="Firefox"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-git-plain-wordmark" title="Git"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-github-original-wordmark" title="Github"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-gitlab-plain-wordmark" title="GitLab"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
-                          </div>
-                        </div>
-                      </div> 
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-mysql-plain-wordmark" title="MySql"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">90%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-postgresql-plain-wordmark" title="Postgresql"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">90%</div>
-                          </div>
-                        </div>
-                      </div>  
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-slack-plain-wordmark" title="Slack"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">65%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-trello-plain-wordmark" title="Trello"></i>
-                        </div>
-                        <div class="col-md-10">
-                          <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
-                          </div>
-                        </div>
-                      </div>
+                      <?php foreach($lesCompOutilsInfo as $outilsInfo){
+                          $class = "";
+                          if($outilsInfo['taille'] < 50){$class = 'bg-danger';}
+                          else if ($outilsInfo['taille'] < 60){$class = 'bg-warning';} 
+                          else if($outilsInfo['taille'] < 70) {$class = 'bg-success';} 
+                          else if ($outilsInfo['taille'] < 80){$class = 'bg-primary';} 
+                          else if($outilsInfo['taille']){$class = 'bg-info';}
+                          echo '
+                          <div class="row">
+                            <div class="col-md-2">
+                            <i class="'.$outilsInfo['icone'].'" title="'.$outilsInfo['libelle'].'"></i></div>
+                            <div class="col-md-10">
+                             <div class="border border-dark progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$outilsInfo['taille'].'" aria-valuemin="0"
+                             aria-valuemax="100" style="width:'.$outilsInfo['taille'].'%">'.$outilsInfo['taille'].'%</div>
+                              </div>
+                            </div>
+                          </div>';
+                      }?>
                     </div>
                   </div>
                 </div>

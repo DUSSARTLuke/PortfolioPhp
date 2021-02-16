@@ -128,12 +128,12 @@ class PdoPortfolio {
      * Fonction qui permet de retourner mes compétences devWeb
      * 
      */
-    public function getLesCompdevWeb(){
+    public function getLesCompInfoSpe($id){
       $requete  = PdoPortfolio::$monPdo->prepare(
-        'SELECT * from competence_dev_web ');
+        'SELECT * from competence_info_spe where type = :id');
+      $requete->bindParam(':id', $id, PDO::PARAM_INT);
       $requete ->execute();
       return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-
 
 }
