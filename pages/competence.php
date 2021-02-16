@@ -5,6 +5,7 @@ try {
   $pageActuelle = 'accueil';
   $presentation = $pdo->getLaPresentation($pageActuelle);
   $lesCompGen = $pdo->getLesCompGen();
+  $lesCompDevWeb = $pdo->getLesCompdevWeb();
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -59,17 +60,29 @@ include('../includes/footer.php');
                     <h5> Développement web</h5>
                     <hr class="my-3">
                     <div class="competences">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
-                        </div>
-                        <div class="col-md-10">
+                        <? foreach($lesCompDevWeb as $devWeb){
+                          if($devWeb['taille'] <50){
+                            $class = 'bg-danger';
+                          } else if ($devWeb['taille'] <50){
+                            $class = 'bg-warning';
+                          } else if($devWeb['taille'] <50) {
+                            $class = 'bg-success';
+                          } else if ($devWeb['taille'] <50){
+                            $class = 'bg-primary';
+                          } else if($devWeb['taille']){
+                            $class = 'bg-info';
+                          }
+                          echo '<div class="row"><div class="col-md-2">
+                          <i class="'.$devWeb['icone'].'" title="'.$devWeb['libelle'].'"></i></div>
+                          <div class="col-md-10">
                           <div class="border border-dark progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated '.$class.'" role="progressbar" aria-valuenow="'.$devWeb['taille'].'" aria-valuemin="0"
+                             aria-valuemax="100" style="width:'.$devWeb['taille'].'%">'.$devWeb['taille'].'%</div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="row">
+                        </div>';
+                          }?>
+                      <!-- <div class="row">
                         <div class="col-md-2">
                           <i class="devicon-bootstrap-plain-wordmark" title="Twitter Bootstrap"></i>
                         </div>
@@ -128,7 +141,7 @@ include('../includes/footer.php');
                             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">72%</div>
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>

@@ -33,7 +33,7 @@ CREATE TABLE `pages` (
   `id` int(11) NOT NULL auto_increment,
   `libelle` varchar(50) NOT NULL,
   `lien` varchar(100) NOT NULL,
-  `presentation` varchar(255) NOT NULL,
+  `presentation` varchar(512) NOT NULL,
   `class` varchar(100) not null,
   `type` enum('nav','reseau') default 'nav' not null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -100,7 +100,7 @@ CREATE table `parcours_sco`(
   `date_obtention` date NOT NULL,
   `intitule` varchar(50) NOT NULL,
   `etat` varchar(50) NOT NULL,
-  `description` varchar(512) NOT NULL
+  `description` varchar(512) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

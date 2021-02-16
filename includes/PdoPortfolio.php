@@ -112,10 +112,28 @@ class PdoPortfolio {
     }
     
     
+    /**
+     * Fonction qui permet de retourner mes compétences générales
+     * 
+     */
     public function getLesCompGen(){
       $requete  = PdoPortfolio::$monPdo->prepare(
         'SELECT * from competence_gen ');
       $requete ->execute();
       return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+    /**
+     * Fonction qui permet de retourner mes compétences devWeb
+     * 
+     */
+    public function getLesCompdevWeb(){
+      $requete  = PdoPortfolio::$monPdo->prepare(
+        'SELECT * from competence_dev_web ');
+      $requete ->execute();
+      return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
 }
