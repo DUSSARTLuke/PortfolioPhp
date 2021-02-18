@@ -75,7 +75,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
 <nav class="nav">
     <div class="container">
       <h1 class="logo"><a href=""><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"
-      <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a></h1>
+       <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a></h1>
       <ul>
         <?php foreach($lesPagesNav as $laPage){
           if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
@@ -94,6 +94,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     </div>
   </nav>
 
+  
 
 
   
