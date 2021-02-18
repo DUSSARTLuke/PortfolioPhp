@@ -13,7 +13,7 @@ include('./includes/footer.php');
 ?>
 
 <!-- Contenu -->
-<div class="container content">
+<section class="container content">
   <div class="container-fluid">
     <div class="container text-center">
       <div class=".col-12 .col-sm-6 .col-xs-8">
@@ -88,7 +88,7 @@ include('./includes/footer.php');
       </div>
     </div>
   </div>
-</div>
+</section>
 
 
 </body>
