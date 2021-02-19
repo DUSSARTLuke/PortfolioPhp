@@ -37,16 +37,15 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   </head>
 
   <body>
-
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a>
+    <a class="navbar-brand" href="#"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      foreach($lesPagesNav as $laPage){
+      <?php foreach($lesPagesNav as $laPage){
         echo '<li class="nav-item">';
         if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
           echo '<a class="nav-link active" aria-current="page" href="">';
@@ -56,7 +55,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           echo '<a class="nav-link" href="'.$laPage['lien'].'">';
         }
         echo $laPage['libelle'].'</a></li>';
-      } ?>  -->
+      } ?>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -68,16 +67,16 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li> -->
-      <!-- </ul>
+      </ul>
     </div>
   </div>
-</nav> -->
-<nav class="nav">
+</nav>
+<!-- <nav class="nav">
     <div class="container">
       <h1 class="logo"><a href=""><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"
        <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a></h1>
       <ul>
-        <?php foreach($lesPagesNav as $laPage){
+        foreach($lesPagesNav as $laPage){
           if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
             echo '<li><a class="current" href="'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
           }  else if(in_array($pageActuelle, $projets)){
@@ -89,10 +88,10 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
         <!-- <li><a href="#" class="current">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li> -->
+        <li><a href="#">Contact</a></li> 
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
   
 
