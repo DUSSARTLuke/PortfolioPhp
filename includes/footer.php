@@ -19,7 +19,7 @@
         </a>
       </li>
       <li>
-        <a href="" target="_blank">
+        <a href="https://github.com/DUSSARTLuke" target="_blank">
           <i class="icon ion-logo-github"></i>
         </a>
       </li>
