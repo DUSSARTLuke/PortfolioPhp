@@ -9,11 +9,9 @@ try {
 }
 
 include('../includes/navbar.php');
-include('../includes/footer.php');
 ?>
 
-<div class="content text-center">
-  
+<main class="page-main">
     <!-- <div class="row">
       <div class="col-sm-3">
         <div class="card">
@@ -221,7 +219,7 @@ include('../includes/footer.php');
 
 <p class="credits">Designed by <a href="https://www.linkedin.com/in/ana%C3%AFs-laghzali-8b613297/" target="_blank">Anaïs Laghzali</a> & developed by <a href="https://remiruc.com" target="_blank">Rémi Rucojevic</a><br>at <a href="https://www.hippocampe.fr" target="_blank">Hippocampe.fr</a></p>
 
-</div>
+</main>
   
   <div id="navire" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -261,3 +259,7 @@ include('../includes/footer.php');
     </div>
   </div>
   
+
+  <?php 
+include('../includes/footer.php');
+
