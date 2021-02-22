@@ -11,7 +11,6 @@ try {
 }
 
 include('../includes/navbar.php');
-include('../includes/footer.php');
 ?>
 
     <!-- Contenu -->
@@ -81,5 +80,6 @@ include('../includes/footer.php');
 
       
     </div>
-  </body>
-</html>
+<?php
+ 
+include('../includes/footer.php');

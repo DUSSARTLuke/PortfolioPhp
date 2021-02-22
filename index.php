@@ -7,9 +7,7 @@ try {
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
-
 include('./includes/navbar.php');
-include('./includes/footer.php');
 ?>
 
 <!-- Contenu -->
@@ -90,6 +88,6 @@ include('./includes/footer.php');
   </div>
 </section>
 
+<?php
 
-</body>
-</html>
+include('./includes/footer.php');
