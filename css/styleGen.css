@@ -12,6 +12,7 @@
   box-sizing: border-box;
 }
 
+
 button {
   background: none;
   outline: none;
@@ -26,6 +27,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* a:hover{
+  transform: perspective(1px) translateZ(0);
+} */
 
 body {
   font: 16px/1.5 "Dosis", sans-serif;
@@ -88,14 +93,15 @@ body {
   justify-content: center;
   flex-grow: 1;
   min-height: 350px;
-  background: var(--main-black-color);
+  /* background: url('../images/pic_ossau.jpg'); */
+  background: #d1d2d3;
   background-blend-mode: luminosity;
-  color: var(--main-white-color);
+  /* color: var(--main-white-color); */
 }
 
-.page-main div {
+/* .page-main div {
   max-width: 500px;
-}
+} */
 
 .page-main h1 {
   margin-bottom: 20px;
@@ -103,6 +109,9 @@ body {
 
 .page-main p + p {
   margin-top: 10px;
+}
+.jumbotron{
+  background:none;
 }
 
 
@@ -246,3 +255,387 @@ body {
     transform: translateY(0);
   }
 }
+
+
+/*****  Chart vertical compétences  *****/
+
+.chart {
+  font-size: 1.8em;
+  display: flex;
+  flex-direction: row;
+  height: 12em;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.name{
+  position:relative;
+  bottom:-200px;
+  /* right:25px; */
+  transform: translateX(-160%);
+  text-align:center;
+  color: black;
+  height:25px;
+  font-size: 2em;
+}
+.bar {
+  font-size: 18px;
+  position: relative;
+  width: 5em;
+  padding: 1em;
+  transition: transform 2s linear;
+  transform: rotateX(-30deg) rotateY(-135deg);
+  transform-style: preserve-3d;
+}
+.bar.red .face.floor {
+  background-color: rgba(185, 0, 110, 0.2);
+}
+.bar.red .face > .growing-bar {
+  background-color: rgba(236, 0, 140, 0.8);
+}
+.bar.red .face > .growing-bar:before {
+  color: #530031;
+  border-top-color: #b9006e;
+}
+.bar.cyan .face.floor {
+  background-color: rgba(39, 187, 241, 0.2);
+}
+.bar.cyan .face > .growing-bar {
+  background-color: rgba(87, 202, 244, 0.8);
+}
+.bar.cyan .face > .growing-bar:before {
+  color: #0b7da7;
+  border-top-color: #27bbf1;
+}
+.bar.navy .face.floor {
+  background-color: rgba(6, 36, 58, 0.2);
+}
+.bar.navy .face > .growing-bar {
+  background-color: rgba(10, 64, 105, 0.8);
+}
+.bar.navy .face > .growing-bar:before {
+  color: black;
+  border-top-color: #06243a;
+}
+.bar.lightGray .face.floor {
+  background-color: rgba(119, 119, 119, 0.2);
+}
+.bar.lightGray .face > .growing-bar {
+  background-color: rgba(145, 145, 145, 0.8);
+}
+.bar.lightGray .face > .growing-bar:before {
+  color: #444444;
+  border-top-color: #777777;
+}
+.bar.yellow .face.floor {
+  background-color: rgba(194, 157, 11, 0.2);
+}
+.bar.yellow .face > .growing-bar {
+  background-color: rgba(241, 196, 15, 0.8);
+}
+.bar.yellow .face > .growing-bar:before {
+  color: #614f06;
+  border-top-color: #c29d0b;
+}
+.bar.lime .face.floor {
+  background-color: rgba(88, 150, 0, 0.2);
+}
+.bar.lime .face > .growing-bar {
+  background-color: rgba(118, 201, 0, 0.8);
+}
+.bar.lime .face > .growing-bar:before {
+  color: #1c3000;
+  border-top-color: #589600;
+}
+.bar.gray .face.floor {
+  background-color: rgba(43, 43, 43, 0.2);
+}
+.bar.gray .face > .growing-bar {
+  background-color: rgba(68, 68, 68, 0.8);
+}
+.bar.gray .face > .growing-bar:before {
+  color: black;
+  border-top-color: #2b2b2b;
+}
+.bar .face {
+  position: relative;
+  bottom: 0;
+  width: 2em;
+  height: 2em;
+  background-position: center center;
+}
+.bar .side-0,
+.bar .side-1 {
+  overflow: hidden;
+  height: 10em;
+}
+.bar .side-0 {
+  transform: rotateY(90deg) translateZ(1em);
+  background-color: rgba(241, 241, 241, 0.8);
+}
+.bar .side-0 .growing-bar {
+  background-color: #57caf4;
+}
+.bar .side-1 {
+  transform: rotateY(180deg) translateY(-10em) translateZ(1em);
+  background-color: rgba(216, 216, 216, 0.8);
+}
+.bar .side-1 .growing-bar {
+  background-color: #10b3ef;
+}
+.bar .top {
+  transform: rotateX(90deg) translateZ(21em);
+  text-align: center;
+  background-color: rgba(254, 254, 254, 0.8);
+}
+.bar .floor {
+  transform: rotateX(-90deg) translateY(0em) translateZ(-13em) rotate(180deg);
+  text-align: center;
+  background-color: transparent;
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3), 0.6em -1em 3em rgba(0, 0, 0, 0.3), 1em 1em 10em rgba(254, 254, 254, 0.8);
+}
+.bar .growing-bar {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.bar .growing-bar:before {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .6em;
+  font-weight: 700;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: .8em;
+  text-align: center;
+  opacity: 1;
+  color: #0a4069;
+  border-top: 2px dotted #0a4069;
+}
+
+.small-font-size {
+  font-size: 1em;
+}
+
+.reglar-font-size {
+  font-size: 1.5em;
+}
+
+.big-font-size {
+  font-size: 1.8em;
+}
+
+.chart .bar-100 .face.side-0 .growing-bar,
+.chart .bar-100 .face.side-1 .growing-bar {
+  transform: translateY(0%);
+  opacity: .8;
+}
+.chart .bar-100 .face.side-0 .growing-bar:before,
+.chart .bar-100 .face.side-1 .growing-bar:before {
+  content: "100";
+}
+
+.chart .bar-95 .face.side-0 .growing-bar,
+.chart .bar-95 .face.side-1 .growing-bar {
+  transform: translateY(5%);
+  opacity: .8;
+}
+.chart .bar-95 .face.side-0 .growing-bar:before,
+.chart .bar-95 .face.side-1 .growing-bar:before {
+  content: "95";
+}
+
+.chart .bar-90 .face.side-0 .growing-bar,
+.chart .bar-90 .face.side-1 .growing-bar {
+  transform: translateY(10%);
+  opacity: .8;
+}
+.chart .bar-90 .face.side-0 .growing-bar:before,
+.chart .bar-90 .face.side-1 .growing-bar:before {
+  content: "90";
+}
+
+.chart .bar-85 .face.side-0 .growing-bar, input[name='status']:checked + .content article .chart .bar.bar-3 .face.side-0 .growing-bar,
+.chart .bar-85 .face.side-1 .growing-bar,
+input[name='status']:checked + .content article .chart .bar.bar-3 .face.side-1 .growing-bar {
+  transform: translateY(15%);
+  opacity: .8;
+}
+.chart .bar-85 .face.side-0 .growing-bar:before, input[name='status']:checked + .content article .chart .bar.bar-3 .face.side-0 .growing-bar:before,
+.chart .bar-85 .face.side-1 .growing-bar:before,
+input[name='status']:checked + .content article .chart .bar.bar-3 .face.side-1 .growing-bar:before {
+  content: "85";
+}
+
+.chart .bar-80 .face.side-0 .growing-bar,
+.chart .bar-80 .face.side-1 .growing-bar {
+  transform: translateY(20%);
+  opacity: .8;
+}
+.chart .bar-80 .face.side-0 .growing-bar:before,
+.chart .bar-80 .face.side-1 .growing-bar:before {
+  content: "80";
+}
+
+.chart .bar-75 .face.side-0 .growing-bar, input[name='status']:checked + .content article .chart .bar.bar-0 .face.side-0 .growing-bar,
+.chart .bar-75 .face.side-1 .growing-bar,
+input[name='status']:checked + .content article .chart .bar.bar-0 .face.side-1 .growing-bar {
+  transform: translateY(25%);
+  opacity: .8;
+}
+.chart .bar-75 .face.side-0 .growing-bar:before, input[name='status']:checked + .content article .chart .bar.bar-0 .face.side-0 .growing-bar:before,
+.chart .bar-75 .face.side-1 .growing-bar:before,
+input[name='status']:checked + .content article .chart .bar.bar-0 .face.side-1 .growing-bar:before {
+  content: "75";
+}
+
+.chart .bar-70 .face.side-0 .growing-bar,
+.chart .bar-70 .face.side-1 .growing-bar {
+  transform: translateY(30%);
+  opacity: .8;
+}
+.chart .bar-70 .face.side-0 .growing-bar:before,
+.chart .bar-70 .face.side-1 .growing-bar:before {
+  content: "70";
+}
+
+.chart .bar-65 .face.side-0 .growing-bar,
+.chart .bar-65 .face.side-1 .growing-bar {
+  transform: translateY(35%);
+  opacity: .8;
+}
+.chart .bar-65 .face.side-0 .growing-bar:before,
+.chart .bar-65 .face.side-1 .growing-bar:before {
+  content: "65";
+}
+
+.chart .bar-60 .face.side-0 .growing-bar,
+.chart .bar-60 .face.side-1 .growing-bar {
+  transform: translateY(40%);
+  opacity: .8;
+}
+.chart .bar-60 .face.side-0 .growing-bar:before,
+.chart .bar-60 .face.side-1 .growing-bar:before {
+  content: "60";
+}
+
+.chart .bar-55 .face.side-0 .growing-bar, input[name='status']:checked + .content article .chart .bar.bar-1-1 .face.side-0 .growing-bar,
+.chart .bar-55 .face.side-1 .growing-bar,
+input[name='status']:checked + .content article .chart .bar.bar-1-1 .face.side-1 .growing-bar {
+  transform: translateY(45%);
+  opacity: .8;
+}
+.chart .bar-55 .face.side-0 .growing-bar:before, input[name='status']:checked + .content article .chart .bar.bar-1-1 .face.side-0 .growing-bar:before,
+.chart .bar-55 .face.side-1 .growing-bar:before,
+input[name='status']:checked + .content article .chart .bar.bar-1-1 .face.side-1 .growing-bar:before {
+  content: "55";
+}
+
+.chart .bar-50 .face.side-0 .growing-bar,
+.chart .bar-50 .face.side-1 .growing-bar {
+  transform: translateY(50%);
+  opacity: .8;
+}
+.chart .bar-50 .face.side-0 .growing-bar:before,
+.chart .bar-50 .face.side-1 .growing-bar:before {
+  content: "50";
+}
+
+.chart .bar-45 .face.side-0 .growing-bar, input[name='status']:checked + .content article .chart .bar.bar-2 .face.side-0 .growing-bar,
+.chart .bar-45 .face.side-1 .growing-bar,
+input[name='status']:checked + .content article .chart .bar.bar-2 .face.side-1 .growing-bar {
+  transform: translateY(55%);
+  opacity: .8;
+}
+.chart .bar-45 .face.side-0 .growing-bar:before, input[name='status']:checked + .content article .chart .bar.bar-2 .face.side-0 .growing-bar:before,
+.chart .bar-45 .face.side-1 .growing-bar:before,
+input[name='status']:checked + .content article .chart .bar.bar-2 .face.side-1 .growing-bar:before {
+  content: "45";
+}
+
+.chart .bar-40 .face.side-0 .growing-bar,
+.chart .bar-40 .face.side-1 .growing-bar {
+  transform: translateY(60%);
+  opacity: .8;
+}
+.chart .bar-40 .face.side-0 .growing-bar:before,
+.chart .bar-40 .face.side-1 .growing-bar:before {
+  content: "40";
+}
+
+.chart .bar-35 .face.side-0 .growing-bar,
+.chart .bar-35 .face.side-1 .growing-bar {
+  transform: translateY(65%);
+  opacity: .8;
+}
+.chart .bar-35 .face.side-0 .growing-bar:before,
+.chart .bar-35 .face.side-1 .growing-bar:before {
+  content: "35";
+}
+
+.chart .bar-30 .face.side-0 .growing-bar,
+.chart .bar-30 .face.side-1 .growing-bar {
+  transform: translateY(70%);
+  opacity: .8;
+}
+.chart .bar-30 .face.side-0 .growing-bar:before,
+.chart .bar-30 .face.side-1 .growing-bar:before {
+  content: "30";
+}
+
+.chart .bar-25 .face.side-0 .growing-bar, input[name='status']:checked + .content article .chart .bar.bar-1 .face.side-0 .growing-bar,
+.chart .bar-25 .face.side-1 .growing-bar,
+input[name='status']:checked + .content article .chart .bar.bar-1 .face.side-1 .growing-bar {
+  transform: translateY(75%);
+  opacity: .8;
+}
+.chart .bar-25 .face.side-0 .growing-bar:before, input[name='status']:checked + .content article .chart .bar.bar-1 .face.side-0 .growing-bar:before,
+.chart .bar-25 .face.side-1 .growing-bar:before,
+input[name='status']:checked + .content article .chart .bar.bar-1 .face.side-1 .growing-bar:before {
+  content: "25";
+}
+
+.chart .bar-20 .face.side-0 .growing-bar,
+.chart .bar-20 .face.side-1 .growing-bar {
+  transform: translateY(80%);
+  opacity: .8;
+}
+.chart .bar-20 .face.side-0 .growing-bar:before,
+.chart .bar-20 .face.side-1 .growing-bar:before {
+  content: "20";
+}
+
+.chart .bar-15 .face.side-0 .growing-bar,
+.chart .bar-15 .face.side-1 .growing-bar {
+  transform: translateY(85%);
+  opacity: .8;
+}
+.chart .bar-15 .face.side-0 .growing-bar:before,
+.chart .bar-15 .face.side-1 .growing-bar:before {
+  content: "15";
+}
+
+.chart .bar-10 .face.side-0 .growing-bar,
+.chart .bar-10 .face.side-1 .growing-bar {
+  transform: translateY(90%);
+  opacity: .8;
+}
+.chart .bar-10 .face.side-0 .growing-bar:before,
+.chart .bar-10 .face.side-1 .growing-bar:before {
+  content: "10";
+}
+
+
+.chart .bar-5 .face.side-0 .growing-bar,
+.chart .bar-5 .face.side-1 .growing-bar {
+  transform: translateY(95%);
+  opacity: .8;
+}
+.chart .bar-5 .face.side-0 .growing-bar:before,
+.chart .bar-5 .face.side-1 .growing-bar:before {
+  content: "5";
+}
+

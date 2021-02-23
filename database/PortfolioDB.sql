@@ -207,7 +207,7 @@ INSERT into competence_info_spe (`id`, `libelle`, `taille`, `icone`, `type`) val
 (NULL, 'JavaScript', 65, 'devicon-javascript-plain', '1'),
 (NULL, 'Jquery', 60, 'devicon-jquery-plain-wordmark', '1'),
 (NULL, 'PHP', 80, 'devicon-php-plain', '1'),
-(NULL, 'symfony', 72, 'devicon-symfony-original-wordmark', '1'),
+(NULL, 'symfony', 75, 'devicon-symfony-original-wordmark', '1'),
 (NULL, 'C#', 65, 'devicon-csharp-plain', '2'),
 (NULL, 'Java', 50, 'devicon-java-plain-wordmark', '2'),
 (NULL, 'python', 60, 'devicon-python-plain-wordmark', '2'),

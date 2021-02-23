@@ -25,6 +25,31 @@ include('../includes/navbar.php');
             <div class="jumbotron">
               <h2 class="display-5 text-danger">Mes compétences générales</h2>
               <hr class="my-4">
+<!--               
+                
+                <div class="bar bar-40 yellow">
+                  <div class="face side-0">
+                    <div class="growing-bar"></div>
+                  </div>
+                  <div class="face side-1">
+                    <div class="growing-bar"></div>
+                  </div>
+                  <div class="face top"></div>
+                  <div class="face floor"></div>
+                </div>
+                <div class="name">Test</div>
+                <div class="bar bar-40 yellow">
+                  <div class="face side-0">
+                    <div class="growing-bar"></div>
+                  </div>
+                  <div class="face side-1">
+                    <div class="growing-bar"></div>
+                  </div>
+                  <div class="face top"></div>
+                  <div class="face floor"></div>
+                </div>
+                <div class="name">Test</div>
+              </div> -->
                 <?php foreach($lesCompGen as $compGen){
                   echo '<div class="container"><h5>'.$compGen['libelle'].
                     '</h5><div class="border border-dark progress">
@@ -57,13 +82,36 @@ include('../includes/navbar.php');
                   <button class="nav-link compDev" id="outilsInfo-tab" data-bs-toggle="pill" data-bs-target="#outilsInfo" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Outils informatiques</button>
                 </li>
               </ul>
-              <div class="tab-content">
+              <div class="tab-content" style="padding-top: 50px;">
                 <div class="tab-pane fade show active" id="devWeb">
                   <div class="container">
                     <h5> Développement web</h5>
                     <hr class="my-3">
                     <div class="competences">
+                      <div class="chart small-font-size">
                         <?php foreach($lesCompDevWeb as $devWeb){
+                          $class = "";
+                          if($devWeb['taille'] < 50){$class = 'red';}
+                          else if ($devWeb['taille'] < 60){$class = 'lightGray';} 
+                          else if($devWeb['taille'] < 70) {$class = 'green';} 
+                          else if ($devWeb['taille'] < 80){$class = 'navy';} 
+                          else if($devWeb['taille']){$class = 'cyan';}
+                          
+                          echo '<div class="bar bar-'.$devWeb['taille'].' '.$class.'">
+                            <div class="face side-0">
+                              <div class="growing-bar"></div>
+                            </div>
+                            <div class="face side-1">
+                              <div class="growing-bar"></div>
+                            </div>
+                            <div class="face top"></div>
+                            <div class="face floor"></div>
+                          </div>
+                          <div class="name"><i class="'.$devWeb['icone'].'" title="'.$devWeb['libelle'].'"></i></div>';
+                        }
+                        ?>
+                         
+                        <!-- foreach($lesCompDevWeb as $devWeb){
                           $class = "";
                           if($devWeb['taille'] < 50){$class = 'bg-danger';}
                           else if ($devWeb['taille'] < 60){$class = 'bg-warning';} 
@@ -81,7 +129,8 @@ include('../includes/navbar.php');
                               </div>
                             </div>
                           </div>';
-                          }?>
+                          }?> -->
+                      </div>
                     </div>
                   </div>
                 </div>
