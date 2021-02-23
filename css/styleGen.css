@@ -12,6 +12,7 @@
   box-sizing: border-box;
 }
 
+
 button {
   background: none;
   outline: none;
@@ -26,6 +27,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* a:hover{
+  transform: perspective(1px) translateZ(0);
+} */
 
 body {
   font: 16px/1.5 "Dosis", sans-serif;
@@ -88,7 +93,8 @@ body {
   justify-content: center;
   flex-grow: 1;
   min-height: 350px;
-  background: var(--main-black-color);
+  /* background: url('../images/pic_ossau.jpg'); */
+  background: #d1d2d3;
   background-blend-mode: luminosity;
   /* color: var(--main-white-color); */
 }
@@ -103,6 +109,9 @@ body {
 
 .page-main p + p {
   margin-top: 10px;
+}
+.jumbotron{
+  background:none;
 }
 
 
