@@ -2,20 +2,20 @@
   <script src="/js/general.js"></script>
   </div>
   <footer class="page-footer">
-    <small>© Copyright 2018. All rights reserved.</small>
+    <small>© Copyright 2020. Portfolio | DUSSART Luke | Etudiant en BTS SIO SLAM.</small>
     <ul>
       <li>
-        <a href="" target="_blank">
+        <a href="https://www.facebook.com/luke.dussart" target="_blank">
           <i class="icon ion-logo-facebook"></i>
         </a>
       </li>
       <li>
-        <a href="" target="_blank">
-          <i class="icon ion-logo-twitter"></i>
+        <a href="https://www.instagram.com/lucky_strike64260/?hl=fr" target="_blank">
+        <i class="icon ion-logo-instagram"></i>
         </a>
       </li>
       <li>
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/luke-dussart/" target="_blank">
           <i class="icon ion-logo-linkedin"></i>
         </a>
       </li>
