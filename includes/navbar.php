@@ -20,7 +20,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <meta name="author" content="Luke DUSSART">
     <title>Portfolio | DUSSART Luke</title>
     <meta content="Portfolio de Luke DUSSART, étudiant en BTS SIO à Toulon" name="description">
-    <link rel="icon" href="images/favicon.png" src="https://icones8.fr/icons/set/libre-de-droits">
+    <link rel="icon" href="../images/favicon.png" src="https://icones8.fr/icons/set/libre-de-droits">
     <!-- Theme Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Integration Fontawesome -->
