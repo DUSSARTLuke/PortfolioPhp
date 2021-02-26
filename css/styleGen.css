@@ -34,7 +34,10 @@ a {
 
 body {
   font: 16px/1.5 "Dosis", sans-serif;
-  background: var(--main-white-color);
+  background: url('../images/pic.jpg');
+  background-attachment: fixed;
+  background-repeat : no-repeat;
+  background-size: 100%;
   /*IE FIX*/
   /*display: flex;
   flex-direction: column;*/
@@ -56,7 +59,7 @@ body {
 /* HEADER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-header {
-  background: var(--main-white-color);
+  /* background: var(--main-white-color); */
 }
 .page-header nav {
   display: flex;
@@ -93,8 +96,8 @@ body {
   justify-content: center;
   flex-grow: 1;
   min-height: 350px;
-  /* background: url('../images/pic.jpg'); */
-  background: #d1d2d3;
+
+  /* background: #d1d2d3; */
   background-blend-mode: luminosity;
   /* color: var(--main-white-color); */
 }
@@ -121,7 +124,7 @@ body {
 .page-footer {
   display: flex;
   flex-direction: column-reverse;
-  background: var(--main-white-color);
+  /* background: var(--main-white-color); */
 }
 
 .page-footer ul {
@@ -268,6 +271,7 @@ body {
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 50% 50%;
+  max-width:100%
 }
 
 .name{
