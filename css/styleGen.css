@@ -93,7 +93,7 @@ body {
   justify-content: center;
   flex-grow: 1;
   min-height: 350px;
-  /* background: url('../images/pic_ossau.jpg'); */
+  /* background: url('../images/pic.jpg'); */
   background: #d1d2d3;
   background-blend-mode: luminosity;
   /* color: var(--main-white-color); */
