@@ -9,43 +9,26 @@ try {
 }
 
 include('../../includes/navbar.php');
-include('../../includes/footer.php');
 ?>
 
 
 <div class="container content">
+  <h1 class="text-center"> Contexte GSB </h1>
+  <h2 class="text-center"> GSB - Saisie des fiches de frais </h2>
   <div class="row responsive-reverse"> 
     <div class="col-12 col-lg-6">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../../images/projets/gsb/logo.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../../images/projets/navire/iconTitle.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../../images/projets/navire/iconTitle.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <img src="../../images/projets/gsb/logo.png" alt="..." style="min-width:500px;">
     </div>
     
     
     <div class="col-12 col-lg-6">
     
-      <h5> Test </h5>
+      <h5 class="text-center"></h5>
     
     
     </div>
   </div>
 </div>
   
+<?php
+include('../../includes/footer.php');

@@ -16,7 +16,7 @@ try {
 
 include('../includes/navbar.php');
 ?>
-
+   <link rel="stylesheet" href="../css/css_bar.css">
     <!-- Contenu -->
     <div class="container content">
       <div class="container-fluid">

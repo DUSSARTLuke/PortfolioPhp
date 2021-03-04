@@ -309,6 +309,7 @@
 
 .card {
     height: 325px!important;
+    background: none;
 }
 .card p {
     position: absolute;

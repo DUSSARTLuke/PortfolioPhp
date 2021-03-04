@@ -12,10 +12,10 @@ include('../includes/navbar.php');
 ?>
 
 <main class="page-main">
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-sm-3">
         <div class="card">
-          <img src="../images/projets/gsb/logo.jpg" class="card-img-top" alt="...">
+          <img src="../images/projets/gsb/lab_prem.jpg" class="card-img-top" alt="..." Image par PublicDomainPictures de Pixabay>
           <div class="card-body">
             <h5 class="card-title text-center">GSB - Gestion des fiches de frais</h5>
             <p class="card-text text-center">
@@ -57,8 +57,8 @@ include('../includes/navbar.php');
           </div>
         </div> 
       </div>
-    </div> -->
-    <h1>Tickets cards</h1>
+    </div>
+    <!-- <h1>Tickets cards</h1>
 <ul>
   <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ)">
     <div class="book-container">
@@ -217,11 +217,11 @@ include('../includes/navbar.php');
   </li>
 </ul>
 
-<p class="credits">Designed by <a href="https://www.linkedin.com/in/ana%C3%AFs-laghzali-8b613297/" target="_blank">Anaïs Laghzali</a> & developed by <a href="https://remiruc.com" target="_blank">Rémi Rucojevic</a><br>at <a href="https://www.hippocampe.fr" target="_blank">Hippocampe.fr</a></p>
+<p class="credits">Designed by <a href="https://www.linkedin.com/in/ana%C3%AFs-laghzali-8b613297/" target="_blank">Anaïs Laghzali</a> & developed by <a href="https://remiruc.com" target="_blank">Rémi Rucojevic</a><br>at <a href="https://www.hippocampe.fr" target="_blank">Hippocampe.fr</a></p> -->
 
 </main>
   
-  <div id="navire" class="modal fade" role="dialog">
+  <!-- <div id="navire" class="modal fade" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header card-header-title">
@@ -257,7 +257,7 @@ include('../includes/navbar.php');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   
 
   <?php 
