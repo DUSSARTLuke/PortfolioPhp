@@ -1,0 +1,50 @@
+h3{
+  text-align: left!important;
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.projets{
+  color: black !important;
+  font-weight: bold !important;
+  font-size: 25px;;
+}
+
+h4{
+  color: #00c2c6 !important;
+  font-variant: all-small-caps;
+}
+
+
+.descri_projet a{
+  color: black;
+}
+
+.descri_projet p{
+  font-size: 0.9em;
+}
+
+.descri_projet ul{
+  display:block;
+}
+
+.descri_projet ul li {
+  position: relative;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.descri_projet ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00c2c6;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+
+.center{
+  text-align:center;
+}

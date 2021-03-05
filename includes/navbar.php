@@ -32,8 +32,8 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
-   <link rel="stylesheet" href="../../css/style.css">
-   <link rel="stylesheet" href="../../css/styleGen.css">
+   <link rel="stylesheet" href="../../../css/style.css">
+   <link rel="stylesheet" href="../../../css/styleGen.css">
 
   </head>
 
@@ -98,7 +98,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   <div class="wrapper">
   <header class="page-header" id="navbar">
     <nav>
-      <h2 class="logo"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?>></h2>
+      <h2 class="logo"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?>></h2>
       <ul>
         <?php foreach($lesPagesNav as $laPage){
         echo '<li>';

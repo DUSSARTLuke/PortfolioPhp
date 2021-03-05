@@ -19,7 +19,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title text-center">GSB - Gestion des fiches de frais</h5>
             <p class="card-text text-center">
-              <a href="projets/gsb_gestion.php" class="btn btn-primary">Voir le projet</a>
+              <a href="projets/gsb/gsb_gestion.php" class="btn btn-primary">Voir le projet</a>
             </p>  
           </div>
         </div> 
@@ -30,7 +30,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title text-center">GSB - Saisie des frais de visite</h5>
             <p class="card-text text-center">
-              <a href="projets/gsb_saisie.php" class="btn btn-primary">Voir le projet</a>
+              <a href="projets/gsb/gsb_saisie.php" class="btn btn-primary">Voir le projet</a>
             </p>
           </div>
         </div> 
@@ -41,7 +41,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title text-center">GSB - Clôture des fiches de frais</h5>
             <p class="card-text text-center">
-              <a href="projets/gsb_cloture.php" class="btn btn-primary">Voir le projet</a>
+              <a href="projets/gsb/gsb_cloture.php" class="btn btn-primary">Voir le projet</a>
             </p>
           </div>
         </div> 

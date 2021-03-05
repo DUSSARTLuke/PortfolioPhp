@@ -34,10 +34,10 @@ a {
 
 body {
   font: 16px/1.5 "Dosis", sans-serif;
-  background: url('../images/pic.jpg');
+  background: #4682B4	;/*url('../images/pic.jpg');
   background-attachment: fixed;
   background-repeat : no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   /*IE FIX*/
   /*display: flex;
   flex-direction: column;*/
@@ -114,7 +114,10 @@ body {
   margin-top: 10px;
 }
 .jumbotron{
-  background:none;
+  background: url('../images/pic.jpg');
+  /* background-attachment: fixed; */
+  /* background-repeat : no-repeat; */
+  background-size: 100%;
   border: 1px solid black;
 }
 
@@ -124,7 +127,7 @@ body {
 .page-footer {
   display: flex;
   flex-direction: column-reverse;
-  background: grey;;
+  background: none;
 }
 
 .page-footer ul {
@@ -258,4 +261,9 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  text-align: center;
 }
