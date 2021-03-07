@@ -8,7 +8,7 @@ try {
   echo 'Erreur : ' . $e->getMessage();
 }
 
-include('../../../includes/navbar.php');
+include('../../../includes/navbar_gsb.php');
 ?>
    <link rel="stylesheet" href="../../../css/projets.css">
 
@@ -25,8 +25,6 @@ include('../../../includes/navbar.php');
   <div class="row responsive-reverse"> 
     <div class="col-12 col-lg-6">
     </div>
-    
-    
     <div class="col-12 col-lg-6"> 
       <h2> GSB - Gestion des fiches de frais </h2>
       <h4>Application web </h4>

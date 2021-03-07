@@ -27,7 +27,7 @@ include('../includes/navbar.php');
                 </p>
               </div>
               <div class="text-center mt-4">
-                <a class="btn btn-outline-primary" href="../ressources/CV_DUSSART.pdf" style="color: white;">
+                <a class="btn btn-primary" href="../ressources/CV_DUSSART.pdf" style="color: white;">
                   <i class="fa fa-download"></i> Mon CV
                 </a>
               </div>
@@ -67,7 +67,7 @@ include('../includes/navbar.php');
                       echo '<li>
                       <div class="date float-left">
                         <span class="fa fa-stop-circle"></span>&nbsp;'.date("Y", strtotime($leParcours['date_obtention'])).
-                        '</div><div class="details float-right"><h3>'.$leParcours['intitule']. ' |</h3><h5 class="text-primary"> '. $leParcours['etat'].
+                        '</div><div class="details float-right"><h3>'.$leParcours['intitule']. ' </h3><h5 class="text-primary"> '. $leParcours['etat'].
                         '</h5><p>'.$leParcours['description']. '</p></div></li>';
                     }?>
                   </ul></div>

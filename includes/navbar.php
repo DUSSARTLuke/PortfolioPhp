@@ -105,7 +105,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
         if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
           echo '<a data-anijs="if: mouseover do: bounce" href="">';
         }  else if(in_array($pageActuelle, $projets)){
-          echo '<a href="../'.$laPage['lien'].'">';
+          echo '<a href="../../'.$laPage['lien'].'">';
         } else { 
           echo '<a href="'.$laPage['lien'].'">';
         }
