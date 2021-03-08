@@ -308,7 +308,7 @@
 
 
 .card {
-    height: 325px!important;
+    height: 400px!important;
     background: white;;
 }
 .card p {
@@ -318,7 +318,7 @@
 }
 
 .card-img-top{
-    height: 200px;
+    height: 250px;
     width: auto;
 }
 

@@ -27,7 +27,7 @@ include('../includes/navbar.php');
                 </p>
               </div>
               <div class="text-center mt-4">
-                <a class="btn btn-primary" href="../ressources/CV_DUSSART.pdf" style="color: white;">
+                <a class="btn btn-primary" href="../ressources/CV_DUSSART.pdf" target="_blank" style="color: white;">
                   <i class="fa fa-download"></i> Mon CV
                 </a>
               </div>
