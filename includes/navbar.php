@@ -3,7 +3,7 @@
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
   $lesPagesNav = $pdo->getLesPages('nav');
-  $lesPagesReseau = $pdo->getLesPages('reseau');
+  // $lesPagesReseau = $pdo->getLesPages('reseau');
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -32,8 +32,11 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
    <link rel="stylesheet" href="../../../css/style.css">
    <link rel="stylesheet" href="../../../css/styleGen.css">
+   <link rel="stylesheet" href="../../../css/essai.css" type="text/css">
 
   </head>
 
@@ -96,13 +99,13 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   </nav> -->
 
   <div class="wrapper">
-  <header class="page-header" id="navbar">
+  <!-- <header class="page-header" id="navbar">
     <nav>
-      <h2 class="logo"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?>></h2>
-      <ul>
-        <?php foreach($lesPagesNav as $laPage){
+      <h2 class="logo"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; if(in_array($pageActuelle, $projets)){echo 'src="../../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?>></h2>
+      <ul>foreach($lesPagesNav as $laPage){
         echo '<li>';
         if($pageActuelle === substr($laPage['lien'], strrpos($laPage['lien'], '/') + 1)){
+          $laPageActu = $laPage['libelle'];
           echo '<a data-anijs="if: mouseover do: bounce" href="">';
         }  else if(in_array($pageActuelle, $projets)){
           echo '<a href="../../'.$laPage['lien'].'">';
@@ -115,6 +118,80 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
       <button class="cta-contact">get in touch</button>
     </nav>
   </header>
+  <div class="headline" style="z-index: 2">
+      <div class="inner">
+          <h1> 
+          echo 'Bienvenue dans '. $laPageActu;
+          ?>
+          </h1>
+      </div>
+  </div> -->
+    <nav>
+      <!-- <svg>
+          <defs>
+              <filter id="gooeyness">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+                  <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+              </filter>
+          </defs>
+      </svg> -->
+      <!-- <a class="navbar-brand" href="#"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width: 25px;"  if(in_array($pageActuelle, $projets)){echo 'src="../../images/dussartluke.jpg"';} else { echo 'src="../images/dussartluke.jpg"';} ?> alt="Image d'un jeune stressé et beau "></a> -->
+      <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; ?>
+      <div class="plates">
+          <img class="imageMobile" src="../images/Logo.png" alt="" />
+          <div class="plate plate5" onclick="this.classList.toggle('active')">
+              <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 30,35 H 70 " />
+                  <path class="line line2" d="M 50,50 H 30 L 34,32" />
+                  <path class="line line3" d="M 50,50 H 70 L 66,68" />
+                  <path class="line line4" d="M 30,65 H 70 " />
+              </svg>
+              <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                  <path class="line" d="M 34,32 L 66,68" />
+                  <path class="line" d="M 66,32 L 34,68" />
+              </svg>
+              <ul class="listMobile">
+                <?php foreach($lesPagesNav as $laPage){
+                  if(in_array($pageActuelle, $projets)){
+                    echo '<li><a class="nav_link" href="../'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+                  } else { 
+                    echo '<li><a class="nav_link" href="'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+                  } 
+                }
+                ?>
+                  <!-- <li><a class="nav-link" href="../index.php">Accueil</a></li>
+                  <li><a class="nav-link" href="parcours.php?id=2">Parcours</a></li>
+                  <li><a class="nav-link" href="cv.php?id=3">CV</a></li>
+                  <li><a class="nav-link" href="projet.php?id=4">Projet</a></li>
+                  <li><a class="nav-link" href="stage.php?id=5">Stage</a></li>
+                  <li><a class="nav-link" href="veille.php?id=6">Veille</a></li>
+                  <li><a class="nav-link" href="contact.php?id=7">Contact</a></li> -->
+              </ul>
+
+          </div>
+
+
+      </div>
+      <img class="image3" src="../images/Logo.png" alt="" />
+      <ul class="list">
+        <?php foreach($lesPagesNav as $laPage){
+          if(in_array($pageActuelle, $projets)){
+            echo '<li><a class="nav_link btnTransi" href="../'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+          } else { 
+            echo '<li><a class="nav_link btnTransi" href="'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+          } 
+        }
+        ?>
+          <!-- <li><a class="nav-link btnTransi" href="../index.php">Accueil</a></li>
+          <li><a class="nav-link btnTransi" href="parcours.php?id=2">Parcours</a></li>
+          <li><a class="nav-link btnTransi" href="cv.php?id=3">CV</a></li>
+          <li><a class="nav-link btnTransi" href="projet.php?id=4">Projet</a></li>
+          <li><a class="nav-link btnTransi" href="stage.php?id=5">Stage</a></li>
+          <li><a class="nav-link btnTransi" href="veille.php?id=6">Veille</a></li>
+          <li><a class="nav-link btnTransi" href="contact.php?id=7">Contact</a></li> -->
+      </ul>
+</nav>
   <div class="page-main">
   
 
