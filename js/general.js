@@ -28,9 +28,10 @@ window.addEventListener("load", () => {
 //   }
 // }
 
-var $headline = $('.jumbotron:first'),
+  
+var $headline = $('.headline'),
     $inner = $('.inner'),
-    $nav = $('#navbar'),
+    $nav = $('nav'),
     navHeight = 75;
 
 $(window).scroll(function() {
