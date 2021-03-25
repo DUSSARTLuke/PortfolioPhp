@@ -192,20 +192,12 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           } 
         }
         ?>
-          <!-- <li><a class="nav-link btnTransi" href="../index.php">Accueil</a></li>
-          <li><a class="nav-link btnTransi" href="parcours.php?id=2">Parcours</a></li>
-          <li><a class="nav-link btnTransi" href="cv.php?id=3">CV</a></li>
-          <li><a class="nav-link btnTransi" href="projet.php?id=4">Projet</a></li>
-          <li><a class="nav-link btnTransi" href="stage.php?id=5">Stage</a></li>
-          <li><a class="nav-link btnTransi" href="veille.php?id=6">Veille</a></li>
-          <li><a class="nav-link btnTransi" href="contact.php?id=7">Contact</a></li> -->
       </ul>
     </nav>
     <header>
         <div class="headline" style="z-index: 2">
             <div class="inner">
-                <h1>Bienvenue</h1>
-                <p>Voici mon portfolio !</p>
+                <h1>Bienvenue sur mon portfolio ! </h1>
             </div>
         </div>
     </header>

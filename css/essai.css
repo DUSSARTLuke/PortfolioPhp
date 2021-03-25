@@ -82,7 +82,10 @@
   .page-footer {
     display: flex;
     flex-direction: column-reverse;
-    background: none;
+    background-image: url('../images/Vanishing-Stripes.svg');
+    background-attachment: fixed;
+    background-size: cover;
+  
   }
   
   .page-footer ul {
@@ -360,3 +363,318 @@ section {
   100% {
     opacity: 1;
   }
+}
+.presentation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  height: 80%;
+  background-color: white;
+}
+
+.presentation2{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 50 20;
+}
+.partie2{
+  display: flex;
+  align-items: center;
+  background-image: url('../images/Vanishing-Stripes.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  height: 25%;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+}
+
+
+
+.group{
+  margin-right: 5%;
+  margin-left: 5%;
+  color: #1E2E43;
+}
+
+.group1{
+  margin-left: 3%;
+  color: #1E2E43;
+}
+
+.title{
+  font-size: 3em;
+}
+
+.title1{
+  font-size: 1.5em;
+}
+
+.text{
+  font-size: 2em;
+}
+
+.text1{
+  font-size: 1em;
+}
+.size-normal{
+  font-size: 20px;
+}
+
+
+.image{
+  margin-right: 5%;
+}
+
+.image1{
+  width: 550px;
+}
+
+small{
+  color: white;
+}
+
+.blanc > li{
+  color: white;
+}
+
+.btnTransi{
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+.listMobile .btnTransi{
+  padding-top: 0 !important;
+  margin: 3px !important;
+}
+
+.btnTransi:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #fff;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  
+}
+.btnTransi:hover:before, .btnTransi:focus:before, .btnTransi:active:before {
+  right: 0;
+}
+
+.contact-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 20;
+  background-color: white;
+}
+
+.carte{
+  border: 2px solid #1E2E45;
+  margin: 20;
+  height: 300px;
+  width: 450px;
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+  -moz-box-shadow: 10px 10px 5px #656565;
+  -webkit-box-shadow: 10px 10px 5px #656565;
+  -o-box-shadow: 10px 10px 5px #656565;
+  box-shadow: 5px 5px 5px #656565;
+}
+
+.carte:hover{
+  background-position: -20 -20;
+}
+
+.carte:hover .boutonProjet{
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+.carte .infoCarte{
+  justify-content: space-between;
+  height: 15%;
+  margin: 0 10;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  text-shadow: 0 0 3px #000, 0 0 5px #000;
+  display: flex;
+}
+
+.imgLogo{
+  margin-top: 5px;
+  width: 57.453px;
+  height: 39.391px;
+}
+
+.imgLogo1{
+  margin-top: 5px;
+  width: 39.391px;
+  height: 39.391px;
+}
+
+.carte .boutonProjet{
+  opacity: 0;
+  height: 85%;
+}
+.cards{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.card img{
+ height: 200px !important;
+ width: 200px !important;
+ margin-left: 43px;
+ margin-top: 10px !important;
+}
+
+.row{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+body{
+  line-height:1.3em;
+}
+.history-tl-container{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.history-tl-container ul.tl{
+    margin:20px 0;
+    padding:0;
+    display:inline-block;
+
+}
+.history-tl-container ul.tl li{
+    list-style: none;
+    margin:auto;
+    margin-left:200px;
+    min-height:50px;
+    /*background: rgba(255,255,0,0.1);*/
+    border-left:1px dashed #86D6FF;
+    padding:0 0 50px 30px;
+    position:relative;
+}
+.history-tl-container ul.tl li:last-child{ border-left:0;}
+.history-tl-container ul.tl li::before{
+    position: absolute;
+    left: -21px;
+    content: " ";
+    border: 8px solid rgba(255, 255, 255, 0.74);
+    border-radius: 500%;
+    background: #258CC7;
+    height: 40px;
+    width: 40px;
+    transition: all 500ms ease-in-out;
+
+}
+.history-tl-container ul.tl li:hover::before{
+    border-color:  #258CC7;
+    transition: all 1000ms ease-in-out;
+}
+ul.tl li .item-title{
+  font-size:23px;
+}
+ul.tl li .item-detail{
+    color:rgba(0,0,0,0.5);
+    font-size:16px;
+}
+ul.tl li .timestamp{
+    color: #8D8D8D;
+    position: absolute;
+    width:100px;
+    left: -150px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.lieux{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30 0;
+  margin-bottom: 80 !important;
+}
+
+.textLieux{
+  margin-left: 50px;
+}
+
+.imgLieux{
+    width: 200px;
+}
+
+@media screen and (max-width:991px){
+
+}
+
+@media screen and (max-width:767px){
+  .presentation{
+      flex-direction: column;
+  }
+  .image{
+      margin-top: 5%;
+      margin-right: 0%;
+  }
+  .image1{
+      width: 100%;
+  }
+  .group{
+      margin-right: 0%;
+      margin-left: 0%;
+      font-size: 13px;
+      padding:5%;
+  }
+  .group1{
+      margin-top: 5%;
+      margin-left: 0%;
+  }
+  .presentation2{
+      flex-direction: column;
+  }
+}
+
+@media screen and (max-width:621px){
+
+
+  .carte{
+      width: 360px;
+  }
+
+  ul.tl{
+      margin-right: 50px !important;
+  }
+
+  .presentation{
+      justify-content: center;
+  }
+
+}

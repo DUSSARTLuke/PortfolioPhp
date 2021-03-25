@@ -3,7 +3,7 @@
   </div>
   <footer class="page-footer">
     <small>© Copyright 2020. Portfolio | DUSSART Luke | Etudiant en BTS SIO SLAM.</small>
-    <ul>
+    <ul class="blanc">
       <li>
         <a href="https://www.facebook.com/luke.dussart" target="_blank">
           <i class="icon ion-logo-facebook"></i>
