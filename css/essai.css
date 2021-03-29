@@ -377,7 +377,7 @@ section {
   display: flex;
   align-items: center;
   background-color: white;
-  padding: 50 20;
+  padding-top: 15px;
 }
 .partie2{
   display: flex;

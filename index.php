@@ -21,7 +21,7 @@ include('./includes/navbar.php');
       </h2>
       <div class="text">
           <div>
-              <p>Étudiant en BTS sio au lycée Bonaparte à Toulon</p>
+              <p>Étudiant en BTS SIO au lycée Bonaparte à Toulon</p>
           </div>
       </div>
     </div>    
@@ -38,8 +38,9 @@ include('./includes/navbar.php');
             <p>Présentation</p>
         </h2>
         <div class="">
-            <p class="size-normal"> Je m'appelle DUSSART Luke et je suis actuellement en 2ème année de BTS SIO en option SLAM (solutions 
-              logicielles et applications métiers). Âgé de 21 ans, je suis un passionné de sport et d'informatique.
+            <p class="size-normal"> Je m'appelle Luke DUSSART et je suis actuellement en 2ème année de BTS SIO en option SLAM (solutions 
+              logicielles et applications métiers). 
+              Âgé de 21 ans, je suis un passionné de sport et d'informatique.
             </p>
             <p><br></p>
             <p class="size-normal"></p>
