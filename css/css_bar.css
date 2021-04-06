@@ -15,11 +15,11 @@
   position:relative;
   bottom:-200px;
   /* right:25px; */
-  transform: translateX(-160%);
+  transform: translateX(-125%);
   text-align:center;
   color: black;
   height:25px;
-  font-size: 2em;
+  font-size: 3em;
 }
 .bar {
   font-size: 18px;

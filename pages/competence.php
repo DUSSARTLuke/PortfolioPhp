@@ -23,7 +23,7 @@ include('../includes/navbar.php');
         <div class="container text-center">
           <div class=".col-12 .col-sm-6 .col-xs-6">
             <div class="jumbotron">
-              <h2 class="display-5 text-danger">Mes compétences générales</h2>
+              <h2 class="display-5">Mes compétences générales</h2>
               <hr class="my-4">
                 <?php foreach($lesCompGen as $compGen){
                   echo '<div class="container"><h5>'.$compGen['libelle'].
@@ -38,7 +38,7 @@ include('../includes/navbar.php');
         <div class="container text-center">
           <div class=".col-12 .col-sm-6 .col-xs-6">
             <div class="jumbotron">
-              <h2 class="display-5 text-danger">Mes compétences informatiques</h2>
+              <h2 class="display-5">Mes compétences informatiques</h2>
               <hr class="my-4">
               <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
