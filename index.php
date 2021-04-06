@@ -12,43 +12,51 @@ include('./includes/navbar.php');
 <div class="container">
   <!-- Contenu -->
   <div class="presentation">
-    <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image" src="../images/dussartluke.jpg" alt="Image d'un jeune stressé et beau ">
-    <div class="group">
-      <h2 class="title">
+    <div class="col-5">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image" src="../images/dussartluke.jpg" alt="Image d'un jeune stressé et beau ">
+    </div>
+    <div class="col-5">
+      <div class="group">
+        <h2 class="title">
           <div>
-              <p>DUSSART Luke</p>
+            <p>DUSSART Luke</p>
           </div>
-      </h2>
-      <div class="text">
-          <div>
-              <p>Étudiant en BTS SIO au lycée Bonaparte à Toulon</p>
+        </h2>
+        <div class="text">
+          <div style="text-align:center;">
+            <p class="index">Étudiant en BTS SIO au lycée Bonaparte à Toulon</p>
+            <p class="index"> Développeur Back-end </p>
           </div>
+        </div>
       </div>
-    </div>    
+    </div>
   </div>
 
-    <div class="partie2">
-      <h3> À propos </h3>
-    </div>
+  <div class="cv">
+    <button type="button" class="btn btn-primary" onclick="voirCV()">Mon CV !</button>
+  </div>
 
-    <div class="presentation2">
+  <div class="presentation2">
+    <div class="col-5">
       <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image1" src="../images/pic_ossau.jpg" alt="Image d'un jeune stressé et beau ">
+    </div>
+    <div class="col-5">
       <div class="group1">
         <h2 class="title1">
-            <p>Présentation</p>
+          <p>Présentation</p>
         </h2>
         <div class="">
-            <p class="size-normal"> Je m'appelle Luke DUSSART et je suis actuellement en 2ème année de BTS SIO en option SLAM (solutions 
-              logicielles et applications métiers). 
-              Âgé de 21 ans, je suis un passionné de sport et d'informatique.
-            </p>
-            <p><br></p>
-            <p class="size-normal"></p>
-        </div></br>
-        <a href="pages/cv.php?id=3"><button type="button" class="btn btn-primary" style="background-color:#1E2E43 ; border-color: #1E2E43 ;">Mon CV !</button></a>
+          <p class="size-normal"> Je m'appelle Luke DUSSART et je suis actuellement en 2ème année de BTS SIO en option SLAM (solutions
+            logicielles et applications métiers).
+            Âgé de 21 ans, je suis un passionné de sport et d'informatique.
+          </p>
+          <p><br></p>
+          <p class="size-normal"></p>
+        </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <!-- <section class="container content">
   <div class="container-fluid">

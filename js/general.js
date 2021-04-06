@@ -51,3 +51,7 @@ $(window).scroll(function() {
     $nav.removeClass('scrolled');
   }
 });
+
+function voirCV(){
+  window.open('./ressources/CV_DUSSART_polytech.pdf');
+}
