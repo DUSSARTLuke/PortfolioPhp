@@ -2,8 +2,6 @@
 require_once '../includes/PdoPortfolio.php';
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
-  $pageActuelle = 'accueil';
-  $presentation = $pdo->getLaPresentation($pageActuelle);
   $lesExperiences = $pdo->getLesExperiences();
   $lesParcours = $pdo->getLesParcours();
 } catch (Exception $e) {

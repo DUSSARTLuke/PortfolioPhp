@@ -13,10 +13,10 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
 
 ?>
 <!DOCTYPE html>
-<html lang="fr">
-
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-height"/>
     <meta name="author" content="Luke DUSSART">
     <title>Portfolio | DUSSART Luke</title>
     <meta name="description" content="Portfolio de Luke DUSSART, étudiant en BTS SIO (informatique) à Toulon">
@@ -43,32 +43,29 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <nav>
      <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; ?>
       <div class="plates">
-          <img class="imageMobile" src="../images/logo.png" alt="" />
-          <div class="plate plate5" onclick="this.classList.toggle('active')">
-              <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-                  <path class="line line1" d="M 30,35 H 70 " />
-                  <path class="line line2" d="M 50,50 H 30 L 34,32" />
-                  <path class="line line3" d="M 50,50 H 70 L 66,68" />
-                  <path class="line line4" d="M 30,65 H 70 " />
-              </svg>
-              <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-                  <path class="line" d="M 34,32 L 66,68" />
-                  <path class="line" d="M 66,32 L 34,68" />
-              </svg>
-              <ul class="listMobile">
-                <?php foreach($lesPagesNav as $laPage){
-                  if(in_array($pageActuelle, $projets)){
-                    echo '<li><a class="nav_link" href="../'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
-                  } else { 
-                    echo '<li><a class="nav_link" href="'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
-                  } 
-                }
-                ?>
-              </ul>
-
-          </div>
-
-
+        <img class="imageMobile" src="../images/logo.png" alt="" />
+        <div class="plate plate5" onclick="this.classList.toggle('active')">
+          <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 30,35 H 70 " />
+              <path class="line line2" d="M 50,50 H 30 L 34,32" />
+              <path class="line line3" d="M 50,50 H 70 L 66,68" />
+              <path class="line line4" d="M 30,65 H 70 " />
+          </svg>
+          <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+              <path class="line" d="M 34,32 L 66,68" />
+              <path class="line" d="M 66,32 L 34,68" />
+          </svg>
+          <ul class="listMobile">
+            <?php foreach($lesPagesNav as $laPage){
+              if(in_array($pageActuelle, $projets)){
+                echo '<li><a class="nav_link" href="../'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+              } else { 
+                echo '<li><a class="nav_link" href="'.$laPage['lien'].'">'.$laPage['libelle'].'</a></li>';
+              } 
+            }
+            ?>
+          </ul>
+        </div>
       </div>
       <img class="logo" src="../images/logo.png" alt="" />
       <ul class="list">

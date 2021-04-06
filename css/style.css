@@ -107,7 +107,7 @@
 
 @media (min-width: 500px) {
     #parcours .date {
-        width: 20%;
+        width: 22%;
     }
     #parcours .details {
         width: 80%;
@@ -218,8 +218,7 @@
     transition: background-color ease-in-out 0.2s;
 }
 
-
-.card {
+/* .card {
     height: 400px!important;
     background: white;;
 }
@@ -232,7 +231,7 @@
 .card-img-top{
     height: 250px;
     width: auto;
-}
+} */
 
 .row{
     padding-bottom: 15px!important;;

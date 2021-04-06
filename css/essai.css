@@ -337,6 +337,7 @@ section {
   justify-content: space-between;
   flex-direction: row-reverse;
   height: 80%;
+  margin-top: 5px;
   /* background-color: white; */
 }
 
@@ -496,6 +497,9 @@ svg {
 }
 
 @media (max-width: 992px) {
+  .logo{
+    display:none;
+  }
   .plates {
     display: flex;
     justify-content: flex-end;
@@ -612,7 +616,7 @@ svg {
 @media screen and (min-width: 550px) {
   .page-footer {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 

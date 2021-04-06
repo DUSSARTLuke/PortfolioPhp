@@ -1,3 +1,14 @@
+.project{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 90%;
+}
+
+/* .card{
+  transform: perspective(1600px) rotateY(-50deg);
+
+} */
 h3{
   text-align: left!important;
   color: black !important;
