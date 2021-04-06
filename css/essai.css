@@ -216,7 +216,9 @@ h6 {
 }
 
 header {
-  background: #333;
+  background-image: url("../images/Vanishing-Stripes.svg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .headline {
@@ -402,7 +404,7 @@ small {
 .blanc > li {
   color: white;
 }
-a {
+.nav_link{
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -412,7 +414,7 @@ a {
   padding: 15px 20px;
   position: relative;
 }
-a:after {
+.nav_link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -424,7 +426,7 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+.nav_link:hover:after {
   width: 100%;
   left: 0;
 }
@@ -448,6 +450,162 @@ a:hover:after {
   text-align: center;
   align-items: center;
   margin: 5px auto;
+}
+
+
+  
+svg {
+  height: 80px;
+  position: absolute;
+  width: 80px;
+}
+.plates {
+  display: none;
+  flex-wrap: wrap;
+  height: 50px;
+  width: 54px;
+}
+.listMobile{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgba(17,17,17,0.95);
+  right: -50%;
+  top: 0;
+  text-align: center;
+  padding: 50px 0;
+  line-height: normal;
+  transition: 0.7s;
+  z-index: 3;
+  opacity: 0;
+}
+
+.plate ul{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+}
+
+.plate ul li{
+  padding: 15 0;
+}
+
+.listMobile a.nav-link{
+  padding: 0 !important;
+  margin: 0 !important
+}
+
+@media (max-width: 992px) {
+  .plates {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .list{
+    display: none;
+  }
+}
+.plate {
+  margin-top: 10px;
+  height: 54px;
+  width: 54px;
+}
+.burger {
+  filter: url(#gooeyness);
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
+}
+.x {
+  transform: scale(0);
+  transition: transform 400ms;
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
+  z-index: 4;
+}
+.line {
+  fill: none;
+  stroke: #F2F2F2;
+  stroke-width: 6.9px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.x .line {
+  stroke-width: 5.5px;
+}
+
+.plate .plate5{
+  width: 50px;
+}
+
+/* Den femte rätten */
+.plate5 .line {
+  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+}
+.plate5 .line1 {
+  stroke-dasharray: 40 40;
+}
+.plate5 .line2 {
+  stroke-dasharray: 21 39;
+}
+.plate5 .line3 {
+  stroke-dasharray: 21 39;
+}
+.plate5 .line4 {
+  stroke-dasharray: 40 40;
+}
+.plate5 .x {
+  transition: transform 400ms 50ms;
+}
+
+.active.plate5 .line {
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+}
+.active.plate5 .line1 {
+  stroke-dasharray: 1 40;
+  stroke-dashoffset: -33px;
+}
+.active.plate5 .line2 {
+  stroke-dasharray: 5 39;
+  stroke-dashoffset: -37px;
+}
+.active.plate5 .line3 {
+  stroke-dasharray: 5 39;
+  stroke-dashoffset: -37px;
+}
+.active.plate5 .line4 {
+  stroke-dasharray: 1 40;
+  stroke-dashoffset: -33px;
+}
+.active.plate5 .x {
+  transition: transform 400ms 50ms;
+}
+
+.imageMobile{
+  display: flex;
+  width: 70px;
+  margin-right: auto;
+}
+
+.active .x {
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+.active .listMobile{
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+	transition: .7s ease-in-out;
+  right: 0%;
+}
+
+.active ul li{
+ z-index: 3;
+ display: flex;
+ justify-content: center;
 }
 /* MQ
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
