@@ -4,12 +4,14 @@ try {
   $pdo = PdoPortfolio::getPdoPortfolio();
   $lesPagesNav = $pdo->getLesPages('nav');
   // $lesPagesReseau = $pdo->getLesPages('reseau');
+  $scriptName = filter_input(INPUT_SERVER, 'SCRIPT_NAME');
+  $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
+
+  $headline = $pdo->getHeadline($pageActuelle);
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
 
-$scriptName = filter_input(INPUT_SERVER, 'SCRIPT_NAME');
-$pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +22,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <meta name="author" content="Luke DUSSART">
     <title>Portfolio | DUSSART Luke</title>
     <meta name="description" content="Portfolio de Luke DUSSART, étudiant en BTS SIO (informatique) à Toulon">
-    <link rel="icon" href="/images/logo.png">
+    <link rel="icon" href="/images/logo_loup.png">
     <!-- Theme Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Integration Fontawesome -->
@@ -43,7 +45,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <nav>
      <?php $projets = ['gsb_gestion.php','gsb_cloture.php','gsb_saisie.php','nolark.php']; ?>
       <div class="plates">
-        <img class="imageMobile" src="../images/logo.png" alt="" />
+        <img class="imageMobile" src="../images/logo_loup.png" alt="" />
         <div class="plate plate5" onclick="this.classList.toggle('active')">
           <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
               <path class="line line1" d="M 30,35 H 70 " />
@@ -67,7 +69,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           </ul>
         </div>
       </div>
-      <img class="logo" src="../images/logo.png" alt="" />
+      <img class="logo" src="../images/logo_loup.png" alt="" />
       <ul class="list">
         <?php foreach($lesPagesNav as $laPage){
           if(in_array($pageActuelle, $projets)){
@@ -82,7 +84,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <header>
         <div class="headline" style="z-index: 2">
             <div class="inner">
-                <h1>Bienvenue sur mon portfolio ! </h1>
+                <h1><?php echo $headline; ?></h1>
             </div>
         </div>
     </header>

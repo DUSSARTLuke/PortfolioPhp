@@ -20,7 +20,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   <meta name="author" content="Luke DUSSART">
   <title>Portfolio | DUSSART Luke</title>
   <meta name="description" content="Portfolio de Luke DUSSART, étudiant en BTS SIO (informatique) à Toulon">
-  <link rel="icon" href="../images/favicon.png" src="https://icones8.fr/icons/set/libre-de-droits">
+  <link rel="icon" href="../images/logo_loup.png" src="https://icones8.fr/icons/set/libre-de-droits">
   <!-- Theme Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!-- Integration Fontawesome -->
@@ -43,7 +43,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
 <body>
     <nav>
       <div class="plates">
-        <img class="imageMobile" src="/images/logo.png" alt="" />
+        <img class="imageMobile" src="/images/logo_loup.png" alt="" />
         <div class="plate plate5" onclick="this.classList.toggle('active')">
           <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
             <path class="line line1" d="M 30,35 H 70 " />
@@ -68,7 +68,7 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           </ul>
         </div>
       </div>
-      <a href="/pages/projets.php" ><img class="logo" src="/images/logo.png" alt="" /></a>
+      <a href="/pages/projets.php" ><img class="logo" src="/images/logo_loup.png" alt="" /></a>
       <ul class="list">
         <li>
           <a class="nav_link" <?php if ($pageActuelle == 'gsb_gestion.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Gestion des frais</a>

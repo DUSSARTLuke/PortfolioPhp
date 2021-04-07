@@ -3,7 +3,7 @@ require_once 'includes/PdoPortfolio.php';
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
   $pageActuelle = 'accueil';
-  $presentation = $pdo->getLaPresentation($pageActuelle);
+  // $presentation = $pdo->getLaPresentation($pageActuelle);
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -71,7 +71,7 @@ include('./includes/navbar.php');
             </div>
           </div>
           <br>
-          <?php echo '<p>' . $presentation . '</p>'; ?>
+          echo '<p>' . $presentation . '</p>'; ?>
         </div>
       </div>
     </div>

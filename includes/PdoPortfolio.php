@@ -81,12 +81,12 @@ class PdoPortfolio {
      * @param type $page
      * @return type
      */
-    public function getLaPresentation($page){
+    public function getHeadline($page){
       $requete = PdoPortfolio::$monPdo->prepare(
-        'SELECT presentation from pages where libelle = :page');
-      $requete->bindParam(':page', $page, PDO::PARAM_STR);
+        'SELECT headline from pages where lien like :page');
+      $requete->bindValue(':page', '%'.$page.'%');
       $requete->execute();
-      return $requete->fetch(PDO::FETCH_ASSOC)['presentation'];
+      return $requete->fetch(PDO::FETCH_ASSOC)['headline'];
     }
     
     /**
