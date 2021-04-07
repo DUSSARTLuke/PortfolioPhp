@@ -1,14 +1,14 @@
 <?php
-require_once '../../../includes/PdoPortfolio.php';
+require_once '../includes/PdoPortfolio.php';
 
-include('../../../includes/navbar_gsb.php');
+include('../includes/navbar_gsb.php');
 ?>
 <link rel="stylesheet" href="/css/projets.css">
 
 <div class="container content">
   <div class="container-fluid">
     <h1> Contexte GSB </h1>
-    <img src="../images/projets/gsb/logo.png" alt="..." style="max-width:100px;display: block;margin-left: auto; margin-right: auto">
+    <img src="/images/projets/gsb/logo.png" alt="..." style="max-width:100px;display: block;margin-left: auto; margin-right: auto">
     <p> Issu de la fusion entre le géant américain Galaxy et le conglomérat européen Swiss Bourdin, le laboratoire GSB se positionne comme leader de l'industrie pharmaceutique.
       Après une récente réorganisation de ses services, le groupe a décidé de porter une attention nouvelle à sa force commerciale représentée par les visiteurs médicaux
       qui assurent un travail de conseil auprès des acteurs de la santé. Afin de valoriser cette activité de visite, GSB a décidé la création et la mise en place de
@@ -45,4 +45,4 @@ include('../../../includes/navbar_gsb.php');
 </div>
 
 <?php
-include('../../../includes/footer.php');
+include('../includes/footer.php');

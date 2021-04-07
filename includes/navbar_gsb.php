@@ -30,6 +30,8 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css">
   <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/styleGen.css">
   <link rel="stylesheet" href="/css/essai.css">
@@ -66,23 +68,22 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           </ul>
         </div>
       </div>
-      <img class="logo" src="/images/logo.png" alt="" />
+      <a href="/pages/projets.php" ><img class="logo" src="/images/logo.png" alt="" /></a>
       <ul class="list">
         <li>
-          <a <?php if ($pageActuelle == 'gsb_gestion.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Gestion des frais</a>
+          <a class="nav_link" <?php if ($pageActuelle == 'gsb_gestion.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Gestion des frais</a>
+        </li>
+          <a class="nav_link" <?php if ($pageActuelle == 'gsb_cloture.php') {echo "href=' '";} else {echo 'href="./gsb_cloture.php"'; } ?>>Clôture des frais</a>
         </li>
         <li>
-          <a <?php if ($pageActuelle == 'gsb_cloture.php') {echo "href=' '";} else {echo 'href="./gsb_cloture.php"'; } ?>>Clôture des frais</a>
-        </li>
-        <li>
-          <a <?php if ($pageActuelle == 'gsb_saisie.php') {echo 'href=" "'; } else {echo 'href="./gsb_saisie.php"'; } ?>>Saisie des frais</a>
+          <a class="nav_link" <?php if ($pageActuelle == 'gsb_saisie.php') {echo 'href=" "'; } else {echo 'href="./gsb_saisie.php"'; } ?>>Saisie des frais</a>
         </li>
       </ul>
     </nav>
     <header>
       <div class="headline" style="z-index: 2">
         <div class="inner">
-          <h1>Bienvenue sur mon portfolio ! </h1>
+          <h1>Projet GSB </h1>
         </div>
       </div>
     </header>
