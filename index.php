@@ -54,7 +54,7 @@ include('./includes/navbar.php');
   </div>
   <div class="presentation">
     <div class="col-4">
-      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image" src="../images/dussartluke.jpg" alt="Image d'un jeune stressé et beau ">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image" src="../images/football_luke.jpg" alt="Image d'un jeune stressé et beau ">
     </div>
     <div class="col-6">
       <div class="group">
@@ -69,7 +69,7 @@ include('./includes/navbar.php');
   </div>
   <div class="presentation2">
     <div class="col-6">
-      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image1" src="../images/pic_ossau.jpg" alt="Image d'un jeune stressé et beau ">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 image1" src="../images/fifa_21.jpg" alt="Image d'un jeune stressé et beau ">
     </div>
     <div class="col-6">
       <div class="group">
