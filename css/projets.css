@@ -59,3 +59,11 @@ h4{
 .center{
   text-align:center;
 }
+
+.card{
+  max-height: 500px!important;
+}
+
+.card-title{
+  font-weight: bold;
+}
