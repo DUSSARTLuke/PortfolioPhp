@@ -1,5 +1,5 @@
 
-
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 /****************************************
 * Rubriques
 ****************************************/
@@ -170,6 +170,10 @@
     font-size: 1.2em;
     line-height: 1.5em;
     color: darkblue;
+}
+
+.expe{
+    font-family: 'Libre Baskerville', serif;
 }
 
 

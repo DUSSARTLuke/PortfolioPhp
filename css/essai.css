@@ -1,4 +1,8 @@
 
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Indie+Flower&display=swap");
+
 body {
   font: 16px/1.5 "Dosis", sans-serif;
   background-color: #ffffff;
@@ -170,8 +174,8 @@ body {
   }
 }
 
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+
 
 :root {
   --main-white-color: #f2f2f2;
@@ -232,8 +236,11 @@ header {
 }
 
 .inner {
+  display:flex;
+  overflow: hidden;
+  width:70%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   opacity: 0;
   z-index: 10;
@@ -242,17 +249,31 @@ header {
   -webkit-animation: fade-in 0.75s 0.25s ease-in forwards;
   animation: fade-in 0.75s 0.25s ease-in forwards;
 }
-.inner h1 {
-  margin: 0;
-  font-size: 3.8em;
-  line-height: 1.2em;
+
+.txt{
+  font-family: 'Dancing Script', cursive;
+  white-space: nowrap;
+  font-size: 6rem;
+  animation: scrollTxt 15s linear infinite;
 }
-.inner p {
-  margin: 0;
-  font-size: 1.4em;
-  font-style: italic;
-  font-family: serif;
+
+
+@keyframes scrollTxt{
+  0%{
+    transform: translate(0,0);
+  }
+  100%{
+    transform: translate(-100%,0);
+  }
 }
+
+.return {
+  color: darkgray;
+  top: 50%;
+  left: 15%;
+  transform: rotate(-180deg);
+}
+
 
 nav {
   position: fixed;
@@ -390,6 +411,10 @@ section {
   font-size: 20px;
 }
 
+.passions{
+  font-family: 'Indie Flower', cursive;
+}
+
 .image {
   margin-right: 5%;
 }
@@ -406,6 +431,7 @@ small {
   color: white;
 }
 .nav_link{
+  font-family: 'Abril Fatface', cursive;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -611,6 +637,7 @@ svg {
  display: flex;
  justify-content: center;
 }
+
 /* MQ
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (min-width: 550px) {

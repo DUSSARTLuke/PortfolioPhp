@@ -84,7 +84,16 @@ try {
     <header>
         <div class="headline" style="z-index: 2">
             <div class="inner">
-                <h1><?php echo $headline; ?></h1>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+            </div>
+            <div class="inner return">
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
+                <span class="txt"> <?php echo $headline; ?>&nbsp;</span>
             </div>
         </div>
     </header>

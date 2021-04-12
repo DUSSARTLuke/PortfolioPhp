@@ -19,7 +19,7 @@ include('../includes/navbar.php');
             <div class="jumbotron">
               <h2 style="text-align:center;"><span class="fa fa-comment"></span> En quelques mots...</h2>
               <hr class="my-4">
-              <div class="row">
+              <div class="row expe">
                 <p>J'ai 21 ans, j'habite La Seyne-sur-mer et je suis passionné d'informatique et de sport depuis mon plus jeune âge. Je suis actuellement un BTS Services Informatiques aux Organisations ce qui m'a décidé à aller au delà de la passion, afin
                   de faire de l'informatique et plus particulièrement du développement d'applications, mon métier&nbsp;!
                 </p>
@@ -45,7 +45,7 @@ include('../includes/navbar.php');
                         .'<div class="date">'.date('Y', strtotime($experience['date'])).'</div>'
                       .'</div> <div class="col-9">
                       <div class="profession">'.$experience['intitule'].'</div>'
-                        .'<div class="details">'.$experience['presentation'].'</div></div></div>';
+                        .'<div class="details expe">'.$experience['presentation'].'</div></div></div>';
                     } ?>
               </div>
             </div>
@@ -63,7 +63,7 @@ include('../includes/navbar.php');
                       <div class="date float-left">
                         <span class="fa fa-stop-circle"></span>&nbsp;'.date("Y", strtotime($leParcours['date_obtention'])).
                         '</div><div class="details float-right"><h3>'.$leParcours['intitule']. ' </h3><h5 class="text-danger"> '. $leParcours['etat'].
-                        '</h5><p>'.$leParcours['description']. '</p></div></li>';
+                        '</h5><p class="expe">'.$leParcours['description']. '</p></div></li>';
                     }?>
                   </ul></div>
               </div>
