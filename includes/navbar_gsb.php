@@ -83,7 +83,9 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <header>
       <div class="headline" style="z-index: 2">
         <div class="inner">
-          <h1>Projet GSB </h1>
+          <span class="txt"> Projet GSB </span>
+          <span class="txt"> Projet GSB </span>          
+          <span class="txt"> Projet GSB </span>
         </div>
       </div>
     </header>
