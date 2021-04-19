@@ -15,11 +15,13 @@ include('../includes/navbar_gsb.php');
       plusieurs applications visant à améliorer le suivi des actions menées sur le terrain et la mise en place de la gestion des remboursements des frais des commerciaux.
       Les missions réalisées portent sur les applications de gestion des frais de visite.
     </p>
-    <a class="btn btn-secondary right" target="_blank" href="./ressources/contexte_gsb.pdf">Voir le contexte</a>
+    <div class="text-center">
+      <a class="btn btn-secondary" target="_blank" href="../ressources/gsb/contexte.pdf">Voir le contexte</a>
+    </div>
     <div class="row responsive-reverse">
       <div class="col-12 col-lg-6">
       </div>
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 descri_projet">
         <h2> GSB - Gestion des fiches de frais </h2>
         <h4>Application web </h4>
         <h3> Intervention : </h3>
@@ -31,14 +33,17 @@ include('../includes/navbar_gsb.php');
           <li> PHP </li>
           <li> MySql</li>
         </ul>
-        <h3> Fichiers liées : </h3>
+        <h3> Fichiers liés : </h3>
         <ul>
-          <li> Cahier des charges </li>
-          <li> Normes de développement</li>
-          <li> Documentation </li>
-          <li> Fichiers initiaux </li>
+          <li> <a target="_blank" href="../ressources/gsb/cahier_charges.pdf">Cahier des charges </a></li>
+          <li> <a target="_blank" href="../ressources/gsb/normes.pdf">Normes de développement</a></li>
+          <li> <a target="_blank" href="">Documentation </a></li>
+          <li> <a target="_blank" href="../ressources/gsb/login_log.pdf">Fichiers de login </a></li>
         </ul>
-        <a class="btn btn-light center" target="_blank" href="https://www.gsb.lukedussart.fr">Démonstration</a>
+        <div class="demoGsb">
+          <a class="btn btn-light" target="_blank" href="https://www.gsb.lukedussart.fr">Démonstration</a>
+          <a class="btn btn-light" target="_blank" href="https://github.com/dussartcorp/Gsb">Dépôt github</a>
+        </div>
       </div>
     </div>
   </div>

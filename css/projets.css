@@ -52,12 +52,12 @@ h4{
   border-radius: 50%;
   background: #00c2c6;
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: -15px;
 }
 
-.center{
-  text-align:center;
+.demoGsb{
+  justify-content: space-around;
 }
 
 .card{
