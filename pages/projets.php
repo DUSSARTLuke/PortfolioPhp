@@ -77,7 +77,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Maison des Ligues de Lorraine</h5>
             <p class="card-text">Application web permettant de gérer les inscriptions à un congrès d'escrime</p>
-            <a href="https://www.m2l.lukedussart.fr/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="http://m2l-2.fr.localhost:2503/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
             <a href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
@@ -86,7 +86,7 @@ include('../includes/navbar.php');
     <div class="row">
       <div class="col-4">
         <div class="card">
-          <img src="../images/projets/nolark/nolark_php_netbeans.png" class="card-img-top" alt="...">
+          <img src="../images/projets/capi_react.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Pays et capitales</h5>
             <p class="card-text">Projet d'apprentissage React, afin d'augmenter mon panel de compétences</p>
@@ -97,23 +97,22 @@ include('../includes/navbar.php');
       </div>
       <div class="col-4">
         <div class="card">
-          <img src="../images/projets/navire/navire_symfony_vscode.png" class="card-img-top" alt="...">
+          <img src="../images/projets/portfolio_react.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Portfolio React</h5>
             <p class="card-text">Mise en place d'un portfolio en React.</p>
-            <a href="https://www.navire.lukedussart.fr/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="https://www.react.lukedussart.fr/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
             <a href="https://github.com/DUSSARTLuke/portfolio-react" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
       </div>
       <div class="col-4">
         <div class="card">
-          <img src="../images/projets/maisondesligues/m2l_symfony_vscode.png" class="card-img-top" alt="...">
+          <img src="../images/projets/order_react_laravel.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Gestion de commandes API / React</h5>
             <p class="card-text">Application de gestion de commandes avec une API Rest en Laravel et un front en React</p>
-            <a href="https://www.m2l.lukedussart.fr/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
-            <a href="https://github.com/DUSSARTLuke/Laravel_classAppart" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
+            <a href="https://github.com/DUSSARTLuke/Laravel_classAppart" target="_blank" class="btn btn-primary">Voir le dépôt github</a>
           </div>
         </div>
       </div>
