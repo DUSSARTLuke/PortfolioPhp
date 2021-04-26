@@ -21,7 +21,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">GSB - Gestion des fiches de frais</h5>
             <p class="card-text">Application web permettant de gérer le saisie et la comptabilité des fiches de frais</p>
-            <a href="gsb_gestion.php" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="gsb_gestion.php" class="btn btn-primary float-start">En savoir plus</a>
             <a href="https://github.com/dussartcorp/Gsb" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
@@ -32,7 +32,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">GSB - Saisie des fiches de frais</h5>
             <p class="card-text">Application mobile permettant de saisir des fiches de frais</p>
-            <a href="gsb_gestion.php" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="gsb_gestion.php" class="btn btn-primary float-start">En savoir plus</a>
             <a href="https://github.com/dussartcorp/GSB_android" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
@@ -43,7 +43,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">GSB - Clôture des fiches de frais</h5>
             <p class="card-text">Application de fond permettant de mettre en remboursement toutes les fiches de frais du mois en cours</p>
-            <a href="gsb_cloture.php" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="gsb_cloture.php" class="btn btn-primary float-start">En savoir plus</a>
             <a href="https://github.com/dussartcorp/GSB_gestion_cloture" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
@@ -78,8 +78,31 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Maison des Ligues de Lorraine</h5>
             <p class="card-text">Application web permettant de gérer les inscriptions à un congrès d'escrime</p>
-            <a href="http://m2l-2.fr.localhost:2503/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
-            <a href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
+            <!-- <a href="http://m2l-2.fr.localhost:2503/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a> -->
+            <a style="display:flex; justify-content:center;" href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="justify-content: space-between;">
+      <div class="col-4">
+        <div class="card">
+          <img src="../images/projets/nolark/nolark_php_netbeans.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Coach</h5>
+            <p class="card-text">Application mobile permettant de calculer son IMC </p>
+            <a href="coach.php" class="btn btn-primary float-start">En savoir plus</a>
+            <a href="https://github.com/DUSSARTLuke/NolarkPHP"  target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <img src="../images/projets/navire/navire_symfony_vscode.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Equit'Help</h5>
+            <p class="card-text">Application mobile permettant de créer une séance d'équitation et d'en avoir un historique</p>
+            <div style="display: flex; justify-content:center;"><a href="equithelp.php" class="btn btn-primary float-start">En savoir plus</a></div>
           </div>
         </div>
       </div>
@@ -92,7 +115,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Optimum CIT</h5>
             <p class="card-text">Evolution de certaines pages de l'application web pour opticien vers la nouvelle génération</p>
-            <a href="optimum.php" target="_blank" class="btn btn-primary float-start">Quelques explications</a>
+            <div style="display: flex; justify-content:center;"><a href="optimum.php" class="btn btn-primary float-start">En savoir plus</a></div>
           </div>
         </div>
       </div>
@@ -102,7 +125,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Love radius</h5>
             <p class="card-text">Gestion de nouveaux composants de l'intranet (partie marketing et commercial) ainsi que développement nouvel intranet avec symfony.</p>
-            <a href="love_radius.php" target="_blank" class="btn btn-primary float-start">Quelques explications</a>
+            <div style="display: flex; justify-content:center;"><a href="love_radius.php" class="btn btn-primary float-start">En savoir plus</a></div>
           </div>
         </div>
       </div>
@@ -126,7 +149,7 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Portfolio React</h5>
             <p class="card-text">Mise en place d'un portfolio en React.</p>
-            <a href="https://www.react.lukedussart.fr/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
+            <a href="https://www.react.lukedussart.fr" target="_blank" class="btn btn-primary float-start">Voir le projet</a>
             <a href="https://github.com/DUSSARTLuke/portfolio-react" target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
           </div>
         </div>
