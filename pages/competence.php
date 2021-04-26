@@ -2,7 +2,7 @@
 require_once '../includes/PdoPortfolio.php';
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
-  $pageActuelle = 'accueil';
+  $pageActuelle = 'competence';
   // $presentation = $pdo->getLaPresentation($pageActuelle);
   $lesCompGen = $pdo->getLesCompGen();
   $lesCompDevWeb = $pdo->getLesCompInfoSpe(1);

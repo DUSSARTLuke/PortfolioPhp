@@ -2,7 +2,7 @@
 require_once '../includes/PdoPortfolio.php';
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
-  $pageActuelle = 'accueil';
+  $pageActuelle = 'projets';
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
 }
@@ -85,7 +85,7 @@ include('../includes/navbar.php');
       </div>
     </div>
     <h1> Projets effectués en stage : </h1>
-    <div class="row" style="justify-content: space-around;">
+    <div class="row" style="justify-content: space-between;">
       <div class="col-4">
         <div class="card">
           <img src="../images/stage/logo_optimum.png" class="card-img-top" alt="...">

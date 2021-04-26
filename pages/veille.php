@@ -2,7 +2,7 @@
 require_once '../includes/PdoPortfolio.php';
 try {
   $pdo = PdoPortfolio::getPdoPortfolio();
-  $pageActuelle = 'accueil';
+  $pageActuelle = 'veille';
   // $presentation = $pdo->getLaPresentation($pageActuelle);
 } catch (Exception $e) {
   echo 'Erreur : ' . $e->getMessage();
