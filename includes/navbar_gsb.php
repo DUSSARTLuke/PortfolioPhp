@@ -60,10 +60,10 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
               <a class="nav_link"<?php if ($pageActuelle == 'gsb_gestion.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Gestion des frais</a>
             </li>
             <li>
-              <a class="nav_link"<?php if ($pageActuelle == 'gsb_cloture.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Clôture des frais</a>
+              <a class="nav_link"<?php if ($pageActuelle == 'gsb_cloture.php') {echo 'href=" "';} else {echo 'href="./gsb_cloture.php"';} ?>>Clôture des frais</a>
             </li>
             <li>
-              <a class="nav_link"<?php if ($pageActuelle == 'gsb_saisie.php') {echo 'href=" "';} else {echo 'href="./gsb_gestion.php"';} ?>>Saisie des frais</a>
+              <a class="nav_link"<?php if ($pageActuelle == 'gsb_saisie.php') {echo 'href=" "';} else {echo 'href="./gsb_saisie.php"';} ?>>Saisie des frais</a>
             </li>
           </ul>
         </div>
