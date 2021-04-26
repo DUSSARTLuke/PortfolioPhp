@@ -151,6 +151,9 @@ body {
 .loaded .list > li:nth-child(4) {
   animation: fadeIn 1s ease-in 0.8s forwards;
 }
+.loaded .list > li:nth-child(5) {
+  animation: fadeIn 1s ease-in 1s forwards;
+}
 
 @keyframes fadeIn {
   0% {
