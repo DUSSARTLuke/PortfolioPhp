@@ -54,16 +54,16 @@
   <header>
     <div class="headline" style="z-index: 2">
       <div class="inner">
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
       </div>
       <div class="inner return">
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
-        <span class="txt"> ClassAppart&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
+        <span class="txt"> Maison des Ligues&nbsp;</span>
       </div>
     </div>
   </header>
@@ -73,56 +73,69 @@
 
     <div class="container content">
       <div class="container-fluid">
-        <h1> API Laravel / React </h1>
-        <p> Durant mes recherches pour une alternance, une entreprise m'a proposé d'effectuer un test en faisant une APi Rest Laravel et un front-end en React.
-          J'ai donc effectué cette application durant mes vacances dernières qui n'est pas encore tout à fait opérationnel.
+        <h1> Maison des ligues </h1>
+        <p> Dernier projet effectué en cours, Maison des ligues est notre second projet collaboratif en deuxième année. La maison des ligues de lorraine nous a
+          contacté pour faire leur application web le permettant de gérer les inscriptions à un congrès, les nuitées dans les hôtels ou encore la création de
+          nouveaux ateliers, thèmes, ...
         </p>
         <div class="row responsive-reverse">
           <div class="col-12 col-lg-6">
-            <div id="carouselClassAppart" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselMDL" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselClassAppart" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselClassAppart" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselClassAppart" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselClassAppart" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselMDL" data-bs-slide-to="5" aria-label="Slide 6"></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../images/projets/classappart/produits_view.PNG" class="d-block w-100" alt="...">
+                  <img src="../images/projets/maisondesligues/home.PNG" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/projets/classappart/produit_create.PNG" class="d-block w-100" alt="...">
+                  <img src="../images/projets/maisondesligues/inscription.PNG" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/projets/classappart/order_create.PNG" class="d-block w-100" alt="...">
+                  <img src="../images/projets/maisondesligues/ateliers.PNG" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/projets/classappart/commande_view.PNG" class="d-block w-100" alt="...">
+                  <img src="../images/projets/maisondesligues/atelier.PNG" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../images/projets/maisondesligues/modif_atelier.PNG" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../images/projets/maisondesligues/sejour.PNG" class="d-block w-100" alt="...">
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselClassAppart" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselMDL" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselClassAppart" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselMDL" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
           <div class="col-12 col-lg-6 descri_projet">
-            <h2> ClassAppart </h2>
+            <h2> Maison des ligues </h2>
             <h4>Application web </h4>
             <h3> Intervention : </h3>
-            <p> Développement d'une application web et d'une API Rest pour gérer les commandes ainsi que les produits d'un client.
+            <p> Développement d'une application web permettant de gérer un congrès, ses inscriptions, ateliers, thèmes, ...
             </p>
             <h3> Technologies utilisées : </h3>
             <ul>
-              <li> Laravel </li>
-              <li> React </li>
+              <li> Symfony </li>
+              <li> Server Oracle </li>
+              <li> Serveur Debian </li>
               <li> Mysql </li>
               <li> Visual Studio Code </li>
             </ul>
+            <div style="display: flex; justify-content:center;">
+              <a href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-info">Voir le dépôt github</a>
+            </div>
           </div>
         </div>
       </div>

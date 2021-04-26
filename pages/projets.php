@@ -35,7 +35,7 @@ include('../includes/navbar.php');
             <h5 class="card-title">GSB - Saisie des fiches de frais</h5>
             <p class="card-text">Application mobile permettant de saisir des fiches de frais</p>
             <div style="display: flex; justify-content:space-between;">
-              <a href="gsb_gestion.php" class="btn btn-primary">En savoir plus</a>
+              <a href="gsb_saisie.php" class="btn btn-primary">En savoir plus</a>
               <a href="https://github.com/dussartcorp/GSB_android" target="_blank" class="btn btn-primary">Voir le dépôt github</a>
             </div>
           </div>
@@ -88,8 +88,11 @@ include('../includes/navbar.php');
           <div class="card-body">
             <h5 class="card-title">Maison des Ligues de Lorraine</h5>
             <p class="card-text">Application web permettant de gérer les inscriptions à un congrès d'escrime</p>
-            <!-- <a href="http://m2l-2.fr.localhost:2503/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a> -->
-            <div style="display:flex; justify-content:center;"><a href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-primary">Voir le dépôt github</a></div>
+            <div style="display: flex; justify-content:space-between;">
+              <a class="btn btn-primary" href="mdl.php">En savoir plus</a>
+              <!-- <a href="http://m2l-2.fr.localhost:2503/home" target="_blank" class="btn btn-primary float-start">Voir le projet</a> -->
+              <a href="https://github.com/dussartcorp/M2L" target="_blank" class="btn btn-primary">Voir le dépôt github</a>
+            </div>
           </div>
         </div>
       </div>
