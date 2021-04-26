@@ -1,12 +1,5 @@
 <?php
 
-// try {
-//   $pdo = PdoPortfolio::getPdoPortfolio();
-//   $lesPagesNav = $pdo->getLesPages('nav');
-//   $lesPagesReseau = $pdo->getLesPages('reseau');
-// } catch (Exception $e) {
-//   echo 'Erreur : ' . $e->getMessage();
-// }
 
 $scriptName = filter_input(INPUT_SERVER, 'SCRIPT_NAME');
 $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
@@ -57,25 +50,18 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
         </svg>
         <ul class="listMobile">
           <li>
-            <a class="nav_link" <?php if ($pageActuelle == 'gsb_gestion.php') {
+            <a class="nav_link" <?php if ($pageActuelle == 'coach.php') {
                                   echo 'href=" "';
                                 } else {
-                                  echo 'href="./gsb_gestion.php"';
-                                } ?>>Gestion des frais</a>
+                                  echo 'href="./coach.php"';
+                                } ?>>Coach</a>
           </li>
           <li>
-            <a class="nav_link" <?php if ($pageActuelle == 'gsb_cloture.php') {
+            <a class="nav_link" <?php if ($pageActuelle == 'equithelp.php') {
                                   echo 'href=" "';
                                 } else {
-                                  echo 'href="./gsb_cloture.php"';
-                                } ?>>Clôture des frais</a>
-          </li>
-          <li>
-            <a class="nav_link" <?php if ($pageActuelle == 'gsb_saisie.php') {
-                                  echo 'href=" "';
-                                } else {
-                                  echo 'href="./gsb_saisie.php"';
-                                } ?>>Saisie des frais</a>
+                                  echo 'href="./equithelp.php"';
+                                } ?>>Equit'Help</a>
           </li>
         </ul>
       </div>
@@ -83,33 +69,29 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
     <a href="/pages/projets.php"><img class="logo" src="/images/logo_loup.png" alt="" /></a>
     <ul class="list">
       <li>
-        <a class="nav_link" <?php if ($pageActuelle == 'gsb_gestion.php') {
+        <a class="nav_link" <?php if ($pageActuelle == 'coach.php') {
                               echo 'href=" "';
                             } else {
-                              echo 'href="./gsb_gestion.php"';
-                            } ?>>Gestion des frais</a>
+                              echo 'href="./coach.php"';
+                            } ?>>Coach</a>
       </li>
-      <a class="nav_link" <?php if ($pageActuelle == 'gsb_cloture.php') {
+      <a class="nav_link" <?php if ($pageActuelle == 'equithelp.php') {
                             echo "href=' '";
                           } else {
-                            echo 'href="./gsb_cloture.php"';
-                          } ?>>Clôture des frais</a>
-      </li>
-      <li>
-        <a class="nav_link" <?php if ($pageActuelle == 'gsb_saisie.php') {
-                              echo 'href=" "';
-                            } else {
-                              echo 'href="./gsb_saisie.php"';
-                            } ?>>Saisie des frais</a>
+                            echo 'href="./equithelp.php"';
+                          } ?>>Equit'Help</a>
       </li>
     </ul>
   </nav>
   <header>
     <div class="headline" style="z-index: 2">
-      <div class="inner">
-        <span class="txt"> Projet GSB &nbsp; </span>
-        <span class="txt"> Projet GSB &nbsp; </span>
-        <span class="txt"> Projet GSB &nbsp; </span>
+      <div class="inner" style="width: 50%">
+        <?php if ($pageActuelle == 'equithelp.php') {
+          echo
+          '<span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span>';
+        } else {
+          echo '<span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span>';
+        } ?>
       </div>
     </div>
   </header>

@@ -88,9 +88,9 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
       <div class="inner">
         <?php if ($pageActuelle == 'love_radius.php') {
           echo
-          '<span class="txt"> Love Radius </span><span class="txt"> Love Radius </span><span class="txt"> Love Radius </span>*';
+          '<span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span>';
         } else {
-          echo '<span class="txt"> Optimum CIT </span><span class="txt"> Optimum CIT </span><span class="txt"> Optimum CIT </span>';
+          echo '<span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span>';
         } ?>
       </div>
     </div>

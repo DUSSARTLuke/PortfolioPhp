@@ -87,18 +87,19 @@ include('../includes/navbar.php');
     <div class="row" style="justify-content: space-between;">
       <div class="col-4">
         <div class="card">
-          <img src="../images/projets/nolark/nolark_php_netbeans.png" class="card-img-top" alt="...">
+          <img src="../images/projets/coach_android_java.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Coach</h5>
             <p class="card-text">Application mobile permettant de calculer son IMC </p>
-            <a href="coach.php" class="btn btn-primary float-start">En savoir plus</a>
-            <a href="https://github.com/DUSSARTLuke/NolarkPHP"  target="_blank" class="btn btn-primary float-end">Voir le dépôt github</a>
+            <div style="display: flex; justify-content:center;">
+              <a href="coach.php" class="btn btn-primary">En savoir plus</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-4">
         <div class="card">
-          <img src="../images/projets/navire/navire_symfony_vscode.png" class="card-img-top" alt="...">
+          <img src="../images/projets/equithelp_android_java.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Equit'Help</h5>
             <p class="card-text">Application mobile permettant de créer une séance d'équitation et d'en avoir un historique</p>
