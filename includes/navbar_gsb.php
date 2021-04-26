@@ -111,6 +111,11 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
         <span class="txt"> Projet GSB &nbsp; </span>
         <span class="txt"> Projet GSB &nbsp; </span>
       </div>
+      <div class="inner return">
+        <span class="txt"> Projet GSB &nbsp; </span>
+        <span class="txt"> Projet GSB &nbsp; </span>
+        <span class="txt"> Projet GSB &nbsp; </span>
+      </div>
     </div>
   </header>
   <div class="page-main">

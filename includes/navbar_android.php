@@ -93,6 +93,14 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           echo '<span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span>';
         } ?>
       </div>
+      <div class="inner return" style="width: 50%">
+        <?php if ($pageActuelle == 'equithelp.php') {
+          echo
+          '<span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span><span class="txt"> Equit\'Help&nbsp; </span>';
+        } else {
+          echo '<span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span><span class="txt"> Coach&nbsp; </span>';
+        } ?>
+      </div>
     </div>
   </header>
   <div class="page-main">

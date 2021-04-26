@@ -93,6 +93,14 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
           echo '<span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span>';
         } ?>
       </div>
+      <div class="inner return">
+        <?php if ($pageActuelle == 'love_radius.php') {
+          echo
+          '<span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span><span class="txt"> Love Radius&nbsp; </span>';
+        } else {
+          echo '<span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span><span class="txt"> Optimum CIT&nbsp; </span>';
+        } ?>
+      </div>
     </div>
   </header>
   <div class="page-main">
