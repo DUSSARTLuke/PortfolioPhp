@@ -85,10 +85,10 @@ include('../includes/navbar.php');
       </div>
     </div>
     <h1> Projets effectués en stage : </h1>
-    <div class="row">
-      <div class="col-6">
+    <div class="row" style="justify-content: space-around;">
+      <div class="col-4">
         <div class="card">
-          <img src="../images/stage/logoOptimum.png" class="card-img-top" alt="...">
+          <img src="../images/stage/logo_optimum.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Optimum CIT</h5>
             <p class="card-text">Evolution de certaines pages de l'application web pour opticien vers la nouvelle génération</p>
@@ -96,9 +96,9 @@ include('../includes/navbar.php');
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-4">
         <div class="card">
-          <img src="../images/stage/logoOptimum.png" class="card-img-top" alt="...">
+          <img src="../images/stage/logo_love_radius.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Love radius</h5>
             <p class="card-text">Gestion de nouveaux composants de l'intranet (partie marketing et commercial) ainsi que développement nouvel intranet avec symfony.</p>
