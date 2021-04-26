@@ -33,7 +33,7 @@ include('./includes/navbar.php');
   </div>
 
   <div class="cv">
-    <button type="button" class="btn btn-primary" onclick="voirCV()">Mon CV !</button>
+    <a href="ressources/CV_DUSSARTcesi.pdf" target="_blank" class="btn btn-primary">Mon CV !</a>
   </div>
 
   <div class="presentation2">
