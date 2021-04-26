@@ -16,7 +16,7 @@ include('../includes/navbar_stage.php');
         aux opticiens d'avoir une vue complète sur les clients mais aussi sur les différents modèles de lunettes, verres, montures, ... Dans cette entreprise, j'ai donc fait
         partie d'une équipe d'une dizaine de développeurs. Mon objectif a été d'aider aux différentes évolutions de l'application Live.
       </p>
-      <div class="btn btn-info"><a href="../ressources/Compte_rendu_stage.pdf" target="_blank"> Voir le compte rendu</a></div>
+      <div style="display:flex; justify-content:center;"><a href="../ressources/Compte_rendu_stage.pdf" target="_blank" class="btn btn-info"> Voir le compte rendu</a></div>
     </div>
     <div id="carouselOptimum" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">

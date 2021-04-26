@@ -26,7 +26,6 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/styleGen.css">
   <link rel="stylesheet" href="/css/essai.css">
   <link rel="stylesheet" href="/css/projets.css">
 
@@ -75,11 +74,12 @@ $pageActuelle = substr($scriptName, strrpos($scriptName, '/') + 1);
                               echo 'href="./optimum.php"';
                             } ?>>Optimum CIT</a>
       </li>
-      <a class="nav_link" <?php if ($pageActuelle == 'love_radius.php') {
-                            echo "href=' '";
-                          } else {
-                            echo 'href="./love_radius.php"';
-                          } ?>>Love Radius</a>
+      <li>
+        <a class="nav_link" <?php if ($pageActuelle == 'love_radius.php') {
+                                echo "href=' '";
+                              } else {
+                                echo 'href="./love_radius.php"';
+                              } ?>>Love Radius</a>
       </li>
     </ul>
   </nav>
